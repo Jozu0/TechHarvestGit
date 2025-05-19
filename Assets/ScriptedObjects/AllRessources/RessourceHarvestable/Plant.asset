@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
+  m_Name: Plant
+  m_EditorClassIdentifier: 
+  HP: 3
+  ressourceType: 3
+  ressourceSprite:
+  - {fileID: -247331358, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  - {fileID: -1675533660, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  - {fileID: 693884589, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  - {fileID: 1694099585, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  - {fileID: 254861153, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  - {fileID: -865646547, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  itemSprite: {fileID: 1186516232, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
