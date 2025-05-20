@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
+  m_Name: Cow
+  m_EditorClassIdentifier: 
+  HP: 5
+  ressourceSprite:
+  - {fileID: -1985637937682652263, guid: 2928b56d60f075645ab552d7067e0e55, type: 3}
+  - {fileID: 4398897395770522058, guid: f6534168a242fec4bb87d3b786752904, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: 8625f023e945eae47936540304fed6e9, type: 2}
+  - {fileID: 11400000, guid: bd344a253d45ff245b1059ac71d13433, type: 2}
+  - {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}

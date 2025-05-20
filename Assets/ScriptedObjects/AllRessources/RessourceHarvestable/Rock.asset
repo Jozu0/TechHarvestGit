@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  HP: 3
-  ressourceType: 1
+  HP: 4
   ressourceSprite:
   - {fileID: -499967365, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: 414012762, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: -1006663103, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: 399110894, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
-  itemSprite: {fileID: -942842185, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
+  - {fileID: 11400000, guid: 2a1007f4272355c468f2e585b467e50e, type: 2}
+  - {fileID: 11400000, guid: 10221e0ec8394bd4a93fbb9c9087f4b1, type: 2}

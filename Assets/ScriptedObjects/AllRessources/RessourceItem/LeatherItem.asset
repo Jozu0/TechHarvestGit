@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ddc4f1a57111f4cb87083d203a3c06, type: 3}
+  m_Name: LeatherItem
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: -2319476694228375547, guid: f64d51ae8f5ff584998791cb8e06f66c, type: 3}
+  ressourceAmount: 1
+  ressourceType: 6
+  toolType: 3

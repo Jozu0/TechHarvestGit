@@ -8,12 +8,13 @@ public enum RessourceType
     Coal,
     Plants,
     Meat,
-    Milk,
+    Gravel,
     Leather,
     Flowers,
     Wheat,
     Wool,
-    Egg
+    Sand,
+    Bone
 }
 
 [CreateAssetMenu(fileName = "Ressource", menuName = "Scriptable Objects/Ressource")]

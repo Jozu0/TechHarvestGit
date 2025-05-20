@@ -42,4 +42,10 @@ public class RessourceSpawning : MonoBehaviour
         }
         
     }
+
+    void GetRandomRessources()
+    {
+        
+    }
+    
 }

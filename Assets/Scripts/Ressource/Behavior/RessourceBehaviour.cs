@@ -3,25 +3,26 @@ using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.EventSystems;
-
+using Random = UnityEngine.Random;
 
 
 public class RessourceBehaviour : EventListenerBase
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
-    [SerializeField] private RessourceLists ressourcesListBiome1;
-    [SerializeField] private RessourceLists currentRessourcesList;
-    [SerializeField] private Ressource currentRessourceToSpawn;
-    [SerializeField] private int randomIndexRessourceType;
-    [SerializeField] private int randomIndexSprite;
-    [SerializeField] public int currentRessourceHP;
-    [SerializeField] private RessourceType currentRessourceType;
+    [SerializeField] private List<RessourceLists> ressourcesListBiome1 = new List<RessourceLists>();
+    private List<RessourceLists> currentRessourcesList = new List<RessourceLists>(); 
+    private Ressource currentRessourceToSpawn;
+    private int randomIndexSprite;
+    public int currentRessourceHP;
+    private RessourceType currentRessourceType;
     public SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2D;
-    [SerializeField] private float ressourcesSpeed;
     private GameObject pooledObjects;
     private RessourceManager ressourceManager;
+    
+    [SerializeField] private float ressourcesSpeed;
+
     
     protected override (GameEventType, Action<object,float>)[] GetEventBindings()
     {
@@ -52,15 +53,9 @@ public class RessourceBehaviour : EventListenerBase
     {
         base.OnEnable();
         OnRessourceInitializationBehaviour();
-        //ToolManager.Instance.AddTool(ToolType.None);
+        ToolManager.Instance.AddTool(ToolType.None);
     }
 
-    
-
-    void GetRandomRessources()
-    {
-        
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -95,16 +90,28 @@ public class RessourceBehaviour : EventListenerBase
     {
         if ((GameObject)data != this.gameObject) return;
         gameObject.SetActive(false);
-        ressourceManager.AddItem(currentRessourceToSpawn, currentRessourceType);
-        Debug.Log(currentRessourceToSpawn + " " + currentRessourceType);
+        ressourceManager.AddItem(currentRessourceToSpawn);
+        Debug.Log(currentRessourceToSpawn);
     }
 
     private void OnRessourceInitializationBehaviour()
     {
-        randomIndexRessourceType = UnityEngine.Random.Range(0, currentRessourcesList.RessourceList.Count);
-        currentRessourceToSpawn = currentRessourcesList.RessourceList[randomIndexRessourceType];
+        currentRessourceToSpawn = GetRandomRessource();
         randomIndexSprite = UnityEngine.Random.Range(0,currentRessourceToSpawn.ressourceSprite.Count);
         spriteRenderer.sprite = currentRessourceToSpawn.ressourceSprite[randomIndexSprite];
         currentRessourceHP = currentRessourceToSpawn.HP;
+    }
+
+    private Ressource GetRandomRessource()
+    { 
+        int[] weightedTable = {
+            0,0,0,0,0,0,0,0,0,  // 9 -> 45%
+            1,1,1,1,1,1,1,      // 7 -> 35%  
+            2,2,2,2             // 4 -> 20%
+        }; 
+        RessourceLists randomRessourceList = currentRessourcesList[weightedTable[Random.Range(0, weightedTable.Length)]];
+        int randomIndex = UnityEngine.Random.Range(0, randomRessourceList.RessourceList.Count);
+        Ressource ressourceToSpawn = randomRessourceList.RessourceList[randomIndex];
+        return ressourceToSpawn;
     }
 }

@@ -10,6 +10,7 @@ public class RessourceManager : MonoBehaviour
     [SerializeField] private GameObject slotGrid;
     
     [SerializeField] private List<GameObject> ressourcesList;
+    [SerializeField] private List<RessourceType> ressourceItemsType = new List<RessourceType>();
     
     void Start()
     {
@@ -25,14 +26,15 @@ public class RessourceManager : MonoBehaviour
         
     }
 
-    public void AddItem(Ressource ressourceToAdd, RessourceType ressourceType)
+    public void AddItem(Ressource ressourceToAdd)
     {
 
         foreach (RessourceItem ressourceItem in ressourceToAdd.ressourceItemList) //foreach imbriqué mais genre max 100 itérations
         {
             foreach (GameObject ressource in ressourcesList)
             {
-                if (ressource.GetComponent<SlotUI>().actualRessourceItem!=null && ressource.GetComponent<SlotUI>().actualRessourceItem.ressourceType == ressourceType)
+                if (ressource.GetComponent<SlotUI>().actualRessourceItem!=null &&
+                    ressource.GetComponent<SlotUI>().actualRessourceItem.ressourceType == ressourceItem.ressourceType)
                 {
                         ressource.GetComponent<SlotUI>().AddMoreItem();
                         break;

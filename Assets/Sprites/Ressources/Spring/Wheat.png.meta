@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,20 +131,20 @@ TextureImporter:
       name: Wheat_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 14
-        height: 14
+        x: 64
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3831b5a1d6f462b60800000000000000
-      internalID: 7720945941185500035
+      spriteID: 00b60314a45b9974da513104d840a52d
+      internalID: 1279266222
       vertices: []
       indices: 
       edges: []
@@ -153,20 +153,20 @@ TextureImporter:
       name: Wheat_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1
-        width: 14
-        height: 14
+        x: 80
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ac52e7b9e4b6cd880800000000000000
-      internalID: -8584868804314651190
+      spriteID: 94dc2be202f82444fbf89b43fdec066c
+      internalID: -1751391351
       vertices: []
       indices: 
       edges: []
@@ -175,20 +175,20 @@ TextureImporter:
       name: Wheat_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3
-        width: 11
-        height: 11
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 132091a066d480860800000000000000
-      internalID: 7496326680409604657
+      spriteID: 53382623b17bae7448aed6b23d293bba
+      internalID: -1868060483
       vertices: []
       indices: 
       edges: []
@@ -197,20 +197,20 @@ TextureImporter:
       name: Wheat_3
       rect:
         serializedVersion: 2
-        x: 50
-        y: 3
-        width: 12
-        height: 13
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6d937dc37eb4cb10800000000000000
-      internalID: 2000933539036765551
+      spriteID: a1658cf966cb895499ee602be4f2a578
+      internalID: -2131872297
       vertices: []
       indices: 
       edges: []
@@ -219,20 +219,20 @@ TextureImporter:
       name: Wheat_4
       rect:
         serializedVersion: 2
-        x: 65
-        y: 3
-        width: 14
-        height: 17
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82976c1fdbf6a69d0800000000000000
-      internalID: -2780286958352041688
+      spriteID: 9aa074fdbed37a642aa035d1972b459c
+      internalID: -306222323
       vertices: []
       indices: 
       edges: []
@@ -241,20 +241,64 @@ TextureImporter:
       name: Wheat_5
       rect:
         serializedVersion: 2
-        x: 81
-        y: 3
-        width: 14
-        height: 19
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cbd1d30c5978122e0800000000000000
-      internalID: -2152290069661278788
+      spriteID: 0528a0ce38697d64aac8797ad7b9afe5
+      internalID: 1225435204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wheat_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0653ad3bf66754e82722bad69c2bf7
+      internalID: -735575650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wheat_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a460f983ae976b47a0b531ffc64c65e
+      internalID: -1588172121
       vertices: []
       indices: 
       edges: []
@@ -263,7 +307,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 67f6fc68a58845744bd6f2f49c7357e0
     internalID: 0
     vertices: []
     indices: 
@@ -272,7 +316,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wheat_0: 1279266222
+      Wheat_1: -1751391351
+      Wheat_2: -1868060483
+      Wheat_3: -2131872297
+      Wheat_4: -306222323
+      Wheat_5: 1225435204
+      Wheat_6: -735575650
+      Wheat_7: -1588172121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

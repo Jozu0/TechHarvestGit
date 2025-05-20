@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
   m_Name: Coal
   m_EditorClassIdentifier: 
-  HP: 3
-  ressourceType: 2
+  HP: 7
   ressourceSprite:
   - {fileID: 1869752684, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: -604709178, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: -152657026, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
   - {fileID: -1453935566, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
-  itemSprite: {fileID: -993207622, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: f49b608411bc0364aa131d2ea589d051, type: 2}

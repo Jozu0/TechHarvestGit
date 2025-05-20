@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tree
   m_EditorClassIdentifier: 
   HP: 3
-  ressourceType: 0
   ressourceSprite:
   - {fileID: 4296193443984631328, guid: 7453e31d4e6e8a54d806b4207e10c1a7, type: 3}
   - {fileID: -2770932246066905560, guid: 7453e31d4e6e8a54d806b4207e10c1a7, type: 3}
   - {fileID: 661114108, guid: 7453e31d4e6e8a54d806b4207e10c1a7, type: 3}
-  itemSprite: {fileID: -168777754515822616, guid: f64d51ae8f5ff584998791cb8e06f66c, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}

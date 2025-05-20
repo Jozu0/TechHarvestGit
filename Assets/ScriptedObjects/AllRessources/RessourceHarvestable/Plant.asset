@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
   m_Name: Plant
   m_EditorClassIdentifier: 
-  HP: 3
-  ressourceType: 3
+  HP: 2
   ressourceSprite:
   - {fileID: -247331358, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
   - {fileID: -1675533660, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
@@ -21,4 +20,6 @@ MonoBehaviour:
   - {fileID: 1694099585, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
   - {fileID: 254861153, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
   - {fileID: -865646547, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
-  itemSprite: {fileID: 1186516232, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
+  - {fileID: 11400000, guid: 6bcc3df1328e68e4e99d9984c83e84cc, type: 2}

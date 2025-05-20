@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44809bec6efbf67499db9832dcdeda88, type: 3}
-  m_Name: RessourceListBiome1
+  m_Name: Biome1Tier1Resssources 1
   m_EditorClassIdentifier: 
   RessourceList:
-  - {fileID: 11400000, guid: d8557cfa898b6b544be666b3ae85adf3, type: 2}
-  - {fileID: 11400000, guid: cdea9a51aebcf7a428d54a1c1c2556e6, type: 2}
   - {fileID: 11400000, guid: 5af1ac2b5674a3e478a361e1fa69e5b1, type: 2}
-  - {fileID: 11400000, guid: c32639b94b2f97542b89643da5e736f0, type: 2}
+  - {fileID: 11400000, guid: d8557cfa898b6b544be666b3ae85adf3, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ddc4f1a57111f4cb87083d203a3c06, type: 3}
   m_Name: RockItem
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  ressourceAmount: 0
-  ressourceType: 0
+  itemSprite: {fileID: -942842185, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
+  ressourceAmount: 1
+  ressourceType: 1
   toolType: 0

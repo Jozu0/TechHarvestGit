@@ -1,7 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ToolType {None, Shears,Hammer}
+public enum ToolType
+{
+    None, 
+    Shears,
+    Hammer, 
+    Knife
+}
 
 
 public class ToolManager : MonoBehaviour

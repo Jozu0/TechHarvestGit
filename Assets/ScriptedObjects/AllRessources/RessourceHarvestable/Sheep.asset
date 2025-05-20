@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
+  m_Name: Sheep
+  m_EditorClassIdentifier: 
+  HP: 5
+  ressourceSprite:
+  - {fileID: 8374931779603823983, guid: 486701664cacc36489cd0db8da0072bd, type: 3}
+  - {fileID: -9018441694812707982, guid: 26db8c6a71b44fd40955c46981066b76, type: 3}
+  - {fileID: 6414150410559060612, guid: f276809691e839d4c9261fb2586c48af, type: 3}
+  - {fileID: -5997338703910764125, guid: 6349f3c8c290fe8479e84b6bfd7b86a4, type: 3}
+  ressourceItemList:
+  - {fileID: 11400000, guid: 66dce745a73a4c2478d62d1858f0e370, type: 2}
+  - {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
