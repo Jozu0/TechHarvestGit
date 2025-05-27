@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,15 +7,24 @@ public class SlotUI : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] public RessourceItem actualRessourceItem;
-    [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI amountText;
+    [SerializeField] public Image image;
+    [SerializeField] public TextMeshProUGUI amountText;
     [SerializeField] public int ressourceAmount;
-    
-    void Start()
+    [SerializeField] public GlobalRessourceList globalRessourceList;
+    [SerializeField] public int amountToAdd;
+     public StatisticData statisticData;
+     
+     
+     void Start()
     {
         image = GetComponent<Image>();
         ressourceAmount = 0;
-        gameObject.SetActive(false);
+        if (statisticData.fortuneBoost == 0)
+        {
+            statisticData.fortuneBoost = amountToAdd;
+        }
+        amountToAdd = statisticData.fortuneBoost;
+        
     }
 
     // Update is called once per frame
@@ -36,14 +46,21 @@ public class SlotUI : MonoBehaviour
 
     public void AddMoreItem()
     {
-        Debug.Log("ajout d un item");
-        ressourceAmount++;
-        RefreshInventory();
+        ressourceAmount+=amountToAdd;
+        RefreshInventory(actualRessourceItem.itemSprite, ressourceAmount);
     }
 
-    public void RefreshInventory()
+    public void RefreshInventory(Sprite itemSprite, int amount)
     {
-        image.sprite = actualRessourceItem.itemSprite;
-        amountText.text = ressourceAmount.ToString()+"x"; 
+        image.sprite = itemSprite;
+        amountText.text = amount.ToString()+"x";
+        if (amount < 1)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

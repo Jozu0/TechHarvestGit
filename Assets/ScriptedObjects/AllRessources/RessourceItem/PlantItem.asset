@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ddc4f1a57111f4cb87083d203a3c06, type: 3}
   m_Name: PlantItem
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: -1171164077, guid: fd769597d2317ea42a63a9678c866baa, type: 3}
+  itemSprite: {fileID: -9021642499319556400, guid: c90e1b237e891184a8ac459c937cb329, type: 3}
   ressourceAmount: 1
   ressourceType: 3
   toolType: 0

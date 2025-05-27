@@ -166,6 +166,7 @@ MonoBehaviour:
   notExploding: 0
   bulletSpeed: 8
   bulletDamage: 1
+  statisticData: {fileID: 11400000, guid: 04a89c17054eebc40a620305e890f063, type: 2}
 --- !u!50 &6944044258649747316
 Rigidbody2D:
   serializedVersion: 5

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
+  m_Name: Forge
+  m_EditorClassIdentifier: 
+  currentAmountOfBuildings: 0
+  buildingType: 2
+  buildingSprite: {fileID: 731454507, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  maximumNumberOfBuildings: 2
+  buildingName: Forge I
+  buildingsInWorld: {fileID: 0}
+  itemNeeds:
+  - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
+    ressourceAmountNeeded: 5
+  - ressourceItemNeeded: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
+    ressourceAmountNeeded: 15
+  - ressourceItemNeeded: {fileID: 11400000, guid: f49b608411bc0364aa131d2ea589d051, type: 2}
+    ressourceAmountNeeded: 3
+  - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
+    ressourceAmountNeeded: 10

@@ -6,13 +6,20 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private BulletPool bulletPool;
     [SerializeField] private float cooldown;
     [SerializeField] private float currentTime;
+    [SerializeField] private int bulletDamage;
     [SerializeField] private GameObject activeBulletQueue;
+    public StatisticData statisticData;
     void Start()
     {
         activeBulletQueue = GameObject.FindGameObjectWithTag("PooledBullet");
-
+        if (statisticData.bulletRate == 0)
+        {
+            statisticData.bulletRate = cooldown;
+        }
+        cooldown = statisticData.bulletRate;
     }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -24,12 +31,12 @@ public class PlayerShoot : MonoBehaviour
         if (Time.time >= currentTime)
         {
             currentTime = Time.time + cooldown;
-            GameObject spawnedRessource = bulletPool.GetPooledBullet();
-            if (spawnedRessource != null)
+            GameObject spawnedBullet = bulletPool.GetPooledBullet();
+            if (spawnedBullet != null)
             {
-                spawnedRessource.transform.SetParent(activeBulletQueue.transform);
-                spawnedRessource.transform.position = activeBulletQueue.transform.position;
-                spawnedRessource.SetActive(true);
+                spawnedBullet.transform.SetParent(activeBulletQueue.transform);
+                spawnedBullet.transform.position = activeBulletQueue.transform.position;
+                spawnedBullet.SetActive(true);
             }
 
         }

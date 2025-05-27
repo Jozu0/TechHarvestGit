@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 public class MoveInputHandler : InputHandler
 {
     [SerializeField] private PlayerMove playerMove;
-
+    
+        
+        
     private Vector2 moveInput;
 
     protected override void RegisterInputActions()

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
+  m_Name: House
+  m_EditorClassIdentifier: 
+  currentAmountOfBuildings: 1
+  buildingType: 1
+  buildingSprite: {fileID: 749371211, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
+  maximumNumberOfBuildings: 8
+  buildingName: House I
+  buildingsInWorld: {fileID: 11400000, guid: ff35ce257c8dd5241b771cd0e48add72, type: 2}
+  itemNeeds:
+  - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
+    ressourceAmountNeeded: 3
+  - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
+    ressourceAmountNeeded: 5

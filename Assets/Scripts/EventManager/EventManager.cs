@@ -8,7 +8,9 @@ public enum GameEventType
     GameOver,
     RessourceHit,
     RessourceDead,
-    RessourceInitialization
+    RessourceInitialization,
+    AddOrDeleteRessourceInUI,
+    NoMoreBuildingSelected
 }
 
 // Classe statique pour gérer les événements globaux
@@ -42,5 +44,10 @@ public static class EventManager
         {
             eventDictionary[eventType].Invoke(data,value);
         }
+    }
+    
+    public static bool IsListeningToEvent(GameEventType eventType)
+    {
+        return eventDictionary.ContainsKey(eventType) && eventDictionary[eventType] != null;
     }
 }

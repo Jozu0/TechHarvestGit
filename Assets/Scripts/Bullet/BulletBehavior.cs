@@ -9,11 +9,22 @@ public class BulletBehavior : MonoBehaviour
     private Rigidbody2D rb2D;
     [SerializeField] private bool notExploding;
     [SerializeField] private float bulletSpeed;
-    [SerializeField] public float bulletDamage;
-
+    [SerializeField] public int bulletDamage;
+    [SerializeField] public StatisticData statisticData;
     void Start()
     {
-       
+        if (statisticData.bulletSpeed == 0)
+        {
+            statisticData.bulletSpeed = bulletSpeed;
+        }
+
+        if (statisticData.bulletDamage == 0)
+        {
+            statisticData.bulletDamage = bulletDamage;
+        }
+        bulletSpeed = statisticData.bulletSpeed;
+        bulletDamage = statisticData.bulletDamage;
+
     }
 
     void Awake()

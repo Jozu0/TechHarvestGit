@@ -11,7 +11,7 @@ public abstract class InputHandler : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"InputHandler in {gameObject.name} can't be Init: InputManager not find or PlayerInput null");
+           Debug.LogError($"InputHandler in {gameObject.name} can't be Init: InputManager not find or PlayerInput null");
         }
     }
 

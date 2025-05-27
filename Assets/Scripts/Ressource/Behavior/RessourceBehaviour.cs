@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 
-public class RessourceBehaviour : EventListenerBase
+public class RessourceBehaviour : EventListenerBaseActiveInactive
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
@@ -19,10 +19,10 @@ public class RessourceBehaviour : EventListenerBase
     public SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2D;
     private GameObject pooledObjects;
-    private RessourceManager ressourceManager;
+    private ShootingRessourceManager ressourceManager;
     
     [SerializeField] private float ressourcesSpeed;
-
+    
     
     protected override (GameEventType, Action<object,float>)[] GetEventBindings()
     {
@@ -34,13 +34,13 @@ public class RessourceBehaviour : EventListenerBase
     }
 
 
-    void Awake()
+    new void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentRessourcesList = ressourcesListBiome1; 
         spriteRenderer = GetComponent<SpriteRenderer>();
         pooledObjects = GameObject.FindGameObjectWithTag("PooledObject");
-        ressourceManager = GameObject.FindGameObjectWithTag("RessourceManager").GetComponent<RessourceManager>();
+        ressourceManager = GameObject.FindGameObjectWithTag("RessourceManager").GetComponent<ShootingRessourceManager>();
     }
     
     // Update is called once per frame

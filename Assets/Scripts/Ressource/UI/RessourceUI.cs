@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
-public class RessourceUI : EventListenerBase
+public class RessourceUI : EventListenerBaseActiveInactive
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Ressource currentRessource;
@@ -33,7 +33,7 @@ public class RessourceUI : EventListenerBase
     }
 
 
-   new void  OnEnable()
+   new void OnEnable()
     {
         base.OnEnable();
         OnRessourceInitializationUI();
