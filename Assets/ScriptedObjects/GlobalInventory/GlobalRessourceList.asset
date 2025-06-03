@@ -18,31 +18,31 @@ MonoBehaviour:
     ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
     ressourceType: 1
-    ressourceAmount: 51
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: f49b608411bc0364aa131d2ea589d051, type: 2}
     ressourceType: 2
     ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
     ressourceType: 3
-    ressourceAmount: 69
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
     ressourceType: 4
-    ressourceAmount: 51
+    ressourceAmount: 9
   - ressourceItem: {fileID: 11400000, guid: 2a1007f4272355c468f2e585b467e50e, type: 2}
     ressourceType: 5
-    ressourceAmount: 11
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: 8625f023e945eae47936540304fed6e9, type: 2}
     ressourceType: 6
-    ressourceAmount: 0
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: 6bcc3df1328e68e4e99d9984c83e84cc, type: 2}
     ressourceType: 8
-    ressourceAmount: 20
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: 66dce745a73a4c2478d62d1858f0e370, type: 2}
     ressourceType: 9
-    ressourceAmount: 1
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: 10221e0ec8394bd4a93fbb9c9087f4b1, type: 2}
     ressourceType: 10
-    ressourceAmount: 16
+    ressourceAmount: 99
   - ressourceItem: {fileID: 11400000, guid: bd344a253d45ff245b1059ac71d13433, type: 2}
     ressourceType: 11
-    ressourceAmount: 34
+    ressourceAmount: 99

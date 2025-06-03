@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3028095034d188a44b3b72d38cc7feab, type: 3}
   m_Name: House
   m_EditorClassIdentifier: 
-  buildingSprite: {fileID: -42189169, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  buildingSpriteList:
+  - {fileID: 749371211, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
+  - {fileID: -2120239831, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
   coordinates: 
   buildingType: 1
+  evolveState: 0

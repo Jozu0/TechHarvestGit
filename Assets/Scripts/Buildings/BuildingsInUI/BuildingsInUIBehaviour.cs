@@ -41,7 +41,7 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
         buildingInUIInstantiate = GameObject.FindGameObjectWithTag("BuildingInUIContent").GetComponent<BuildingInUIInstantiate>();
         SetBuildingAmountText(null, 0);
         buildingNameText.text = buildingsInMenu.buildingName;
-        buildingSpriteComponent.sprite = buildingsInMenu.buildingSprite[buildingsInMenu.evolveState];
+        buildingSpriteComponent.sprite = buildingsInMenu.buildingSprite[0];
         buildingsInMenu.itemNeeds = buildingsInMenu.itemNeeds
             .OrderBy(r => r.ressourceItemNeeded.ressourceType) // trie par enum dans l'ordre de définition
             .ToList();

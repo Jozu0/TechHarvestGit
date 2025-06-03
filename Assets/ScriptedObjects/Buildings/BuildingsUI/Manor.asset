@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
   m_Name: Manor
   m_EditorClassIdentifier: 
+  maxEvoState: 1
   currentAmountOfBuildings: 0
   buildingType: 0
-  buildingSprite: {fileID: -456733277, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  buildingSprite:
+  - {fileID: 1386740439, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
+  - {fileID: -1613266747, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   maximumNumberOfBuildings: 1
-  buildingName: Manor I
+  buildingName: Manor
   buildingsInWorld: {fileID: 11400000, guid: c52629300a66aa742942401764663636, type: 2}
   itemNeeds:
   - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
@@ -25,3 +28,13 @@ MonoBehaviour:
     ressourceAmountNeeded: 1
   - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
     ressourceAmountNeeded: 5
+  needsToEvolve: []
+  listNeedsToEvolves:
+  - needsToEvolve:
+    - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
+      ressourceAmountNeeded: 5
+    - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
+      ressourceAmountNeeded: 10
+    - ressourceItemNeeded: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
+      ressourceAmountNeeded: 5
+    evolveStateNeed: 0

@@ -15,14 +15,21 @@ public class BuildingsInMenu : ScriptableObject
         public RessourceItem ressourceItemNeeded;
         public int ressourceAmountNeeded;
     }
-
+    [System.Serializable]
+    public struct ListNeedsToEvolves
+    {
+        public List<NeedsToEvolve> needsToEvolve;
+        public int evolveStateNeed;
+    }
+    
+    [System.Serializable]
     public struct NeedsToEvolve
     {
         public RessourceItem ressourceItemNeeded;
         public int ressourceAmountNeeded;
     }
 
-    public int evolveState;
+    public int maxEvoState;
     public int currentAmountOfBuildings;
     public BuildingType buildingType;
     public List<Sprite> buildingSprite = new List<Sprite>();
@@ -32,7 +39,9 @@ public class BuildingsInMenu : ScriptableObject
 
     [SerializeField]
     public List<ItemNeed> itemNeeds = new List<ItemNeed>();
-
+    public List<NeedsToEvolve> needsToEvolve = new List<NeedsToEvolve>();
+    [SerializeField]
+    public List<ListNeedsToEvolves> listNeedsToEvolves = new List<ListNeedsToEvolves>();
     
     
    

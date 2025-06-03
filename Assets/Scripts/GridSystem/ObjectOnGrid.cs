@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 
 public class ObjectOnGrid : MonoBehaviour
@@ -11,6 +12,7 @@ public class ObjectOnGrid : MonoBehaviour
     
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject highLight;
+    [SerializeField] private GameObject flashHightLight;
     [SerializeField] private bool isEmpty;
     [SerializeField] private Color emptyColor;
     [SerializeField] private Color fullColor;
@@ -20,10 +22,22 @@ public class ObjectOnGrid : MonoBehaviour
     [SerializeField] private TileList tileList;
     [SerializeField] private BuildingsInMenuList buildingsInMenuList;
     [SerializeField] private GlobalRessourceList globalRessourceList;
+    [SerializeField] private UIManager UIManager;
+    [SerializeField] private BuildingUpgradeUIBehaviour upgradeUIPanel;
+    private static SpriteRenderer currentSpriteRenderer = null;
+    private static Tween flashTween = null;
+    private Vector2 localPos;
+    public int actualEvolutionState ;
     void Start()
     {
         gridPlacementSystem = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridPlacementSystem>();
+        UIManager = GameObject.FindGameObjectWithTag("MainUIPanel").GetComponent<UIManager>();
+        upgradeUIPanel = UIManager.UIUpgradeManagementGameObject.GetComponent<BuildingUpgradeUIBehaviour>();
         gridPlacementSystem.isBuildingSelected = false;
+        localPos = new Vector2(
+                (((transform.position.x - 0.5f) / 1.5f) - 0.17f),
+                ((transform.position.y - 0.5f) / 1.5f) - 0.17f);
+        actualEvolutionState = tileList.GetCurrentEvolveState(localPos);
         UpdateContent();
     }
 
@@ -38,7 +52,7 @@ public class ObjectOnGrid : MonoBehaviour
         {
             isEmpty = false;
             buildingOnGrid.SetActive(true);
-            buildingOnGrid.GetComponent<SpriteRenderer>().sprite = buildingsInWorld.buildingSpriteList[buildingsInWorld.evolveState];
+            buildingOnGrid.GetComponent<SpriteRenderer>().sprite = buildingsInWorld.buildingSpriteList[actualEvolutionState];
 
         }
     }
@@ -73,14 +87,33 @@ public class ObjectOnGrid : MonoBehaviour
        
     }
 
-    void OnMouseRightClick()
+    public void OnMouseCancel()
     {
         gridPlacementSystem.NoMoreBuildings();
+        upgradeUIPanel.NoMoreBuildingsSelectedToUpgrade();
+        UIManager.ChangeCurrentToRessourceManagement(); 
+        if (flashTween != null && flashTween.IsActive())
+        {
+            flashTween.Kill();
+        }
+
+        if (currentSpriteRenderer != null)
+        {
+            SpriteRenderer sr = currentSpriteRenderer;
+            sr.DOKill();
+            sr.color = new Color(1, 1, 1, 1);
+
+            sr.DOFade(0f, 0.2f).OnComplete(() =>
+            {
+                sr.gameObject.SetActive(false);
+                currentSpriteRenderer = null;
+                flashTween = null;
+            });
+        }   
     }
     
     void OnMouseExit()
     {
-        
         highLight.SetActive(false);
         if (buildingsInWorld == null)
         {
@@ -105,12 +138,47 @@ public class ObjectOnGrid : MonoBehaviour
                     ((transform.position.x - 0.5f) / 1.5f) - 0.17f,
                     ((transform.position.y - 0.5f) / 1.5f) - 0.17f
                 ), 
-                buildingsInWorld);
+                buildingsInWorld,0);
             UpdateBuildingAmount();
             UpdateGlobalRessources();
             EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
+            return;
         }
+        
+        
+
+        if (isEmpty == false)
+        {
+            
+            upgradeUIPanel.buildingsInWorld = buildingsInWorld;
+            upgradeUIPanel.actualObjectOnGrid = this;
+            upgradeUIPanel.UpdateBuildingUIUpgrade();
+            if (upgradeUIPanel.isInteractable)
+            {
+                upgradeUIPanel.DisplayNeededRessources();
+            }
+            upgradeUIPanel.UpdateBuildingUIUpgrade();
+            FlashHighlight();
+            UIManager.ChangeCurrentToUpgradeManagement();
+
+        }
+        
     }
+
+
+    public void UpdateBuildingInWorld()
+    {
+        actualEvolutionState += 1;
+        buildingOnGrid.GetComponent<SpriteRenderer>().sprite =  buildingsInWorld.buildingSpriteList[actualEvolutionState];
+        tileList.ModifyTile(
+            new Vector2(
+                ((transform.position.x - 0.5f) / 1.5f) - 0.17f,
+                ((transform.position.y - 0.5f) / 1.5f) - 0.17f
+            ),
+            buildingsInWorld, actualEvolutionState);
+    }
+    
+    
 
     void UpdateBuildingAmount()
     {
@@ -137,6 +205,28 @@ public class ObjectOnGrid : MonoBehaviour
         }
     }
 
+    void FlashHighlight()
+        // Si on a déjà un flash actif SUR CE même sprite, on kill l'ancien
+    {
+        SpriteRenderer sr = flashHightLight.GetComponent<SpriteRenderer>();
+        // Si un tween est déjà actif SUR UN AUTRE sprite, on kill ce tween ET on désactive son GameObject
+        if (flashTween != null && flashTween.IsActive())
+        {
+            flashTween.Kill();
+            if (currentSpriteRenderer != null)
+                currentSpriteRenderer.gameObject.SetActive(false);
+        }
+            // Active ce flash et reset alpha
+        flashHightLight.SetActive(true);
+        sr.color = new Color(1, 1, 1, 1);
+            // On stocke la nouvelle référence globale
+        currentSpriteRenderer = sr;
+            // On lance le tween global sur CE sprite
+        flashTween = sr.DOFade(0f, 0.4f)
+            .SetId("UniqueFlashTween")
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine);
+    }
   
 }
 

@@ -34,7 +34,7 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
     }
 
 
-    new void Awake()
+    void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentRessourcesList = ressourcesListBiome1; 

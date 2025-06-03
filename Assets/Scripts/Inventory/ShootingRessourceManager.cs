@@ -11,6 +11,7 @@ public class ShootingRessourceManager : MonoBehaviour
     
     [SerializeField] private List<GameObject> ressourcesList;
     public GlobalRessourceList globalRessourceList;
+    public StatisticData statisticData;
     void Start()
     {
         for (int i = 0; i < numberOfSlot; i++)
@@ -18,32 +19,29 @@ public class ShootingRessourceManager : MonoBehaviour
             ressourcesList.Add(Instantiate(slotPrefab, slotGrid.transform)); // Instantiation de tous les slotPrefab;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void AddItem(Ressource ressourceToAdd)
     {
-
         foreach (RessourceItem ressourceItem in ressourceToAdd.ressourceItemList) //foreach imbriqué mais genre max 100 itérations
         {
             foreach (GameObject ressource in ressourcesList) // On parcours la liste de chaque ressource contenu dans chaque RessourceList
             { // Verifie si la ressource existe déjà dans le slot actuel, et si le slot est vide;
-                if (ressource.GetComponent<SlotUI>().actualRessourceItem!=null && // si le slot est vide
-                    ressource.GetComponent<SlotUI>().actualRessourceItem.ressourceType == ressourceItem.ressourceType) // Si le slot possède le mm ressource type que l'object actuel;
+                if (ressource.GetComponent<SlotUI>().actualRessourceItem!=null && 
+                        // si le slot est vide
+                    ressource.GetComponent<SlotUI>().actualRessourceItem.ressourceType == ressourceItem.ressourceType) 
+                        // Si le slot possède le mm ressource type que l'object actuel;
                 {
-                        ressource.GetComponent<SlotUI>().AddMoreItem(); // On ajoute +n item dans la liste
-                        globalRessourceList.AddRessource(ressourceItem.ressourceType,ressourceItem,ressource.GetComponent<SlotUI>().amountToAdd); // Rajoute le nouvel item dans l'inv global;
-                        break;
+                    ressource.GetComponent<SlotUI>().AddMoreItem();
+                        // On ajoute +n item dans la liste
+                    globalRessourceList.AddRessourceGlobal(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); 
+                        // Rajoute le nouvel item dans l'inv global;
+                    break;
                 }
                 else if(ressource.GetComponent<SlotUI>().actualRessourceItem==null) // Le slot est vide et puisque elseif, l'objet n'existe pas plus haut
                 {
-                        ressource.GetComponent<SlotUI>().AddNewItem(ressourceItem); // On ajoute le nouvel item
-                        globalRessourceList.AddRessource(ressourceItem.ressourceType,ressourceItem,ressource.GetComponent<SlotUI>().amountToAdd); // Rajoute le nouvel item dans l'inv global;
-                        break;
+                    ressource.GetComponent<SlotUI>().AddNewItem(ressourceItem); // On ajoute le nouvel item
+                    globalRessourceList.AddRessourceGlobal(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); // Rajoute le nouvel item dans l'inv global;
+                    break;
                 }
                     
             }

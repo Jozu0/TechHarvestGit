@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UIMenuState currentMenuState;
     private UIMenuState previousMenuState;
     
-    [SerializeField] private GameObject UIOptionsGameObject, UIMenuGameObject, UIRessourceManagementGameObject, UIBuildManagementGameObject, UIUpgradeManagementGameObject;
+    [SerializeField] public GameObject UIOptionsGameObject, UIMenuGameObject, UIRessourceManagementGameObject, UIBuildManagementGameObject, UIUpgradeManagementGameObject;
     [SerializeField] private List<GameObject> UIList = new List<GameObject>();
     
     

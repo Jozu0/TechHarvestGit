@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
   m_Name: Forge
   m_EditorClassIdentifier: 
+  evolveState: 0
   currentAmountOfBuildings: 0
   buildingType: 2
-  buildingSprite: {fileID: 731454507, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  buildingSprite:
+  - {fileID: 731454507, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   maximumNumberOfBuildings: 2
-  buildingName: Forge I
-  buildingsInWorld: {fileID: 0}
+  buildingName: Forge
+  buildingsInWorld: {fileID: 11400000, guid: 73239b44ddc963444accad788e90223c, type: 2}
   itemNeeds:
   - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
     ressourceAmountNeeded: 5
@@ -27,3 +29,5 @@ MonoBehaviour:
     ressourceAmountNeeded: 3
   - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
     ressourceAmountNeeded: 10
+  needsToEvolve: []
+  listNeedsToEvolves: []

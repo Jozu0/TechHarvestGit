@@ -6,7 +6,9 @@ public enum ToolType
     None, 
     Shears,
     Hammer, 
-    Knife
+    Knife,
+    Hoe,
+    FishingRod
 }
 
 
@@ -31,6 +33,11 @@ public class ToolManager : MonoBehaviour
         }
     }
 
+
+    void Start()
+    {
+        ownedTools[ToolType.None] = true;
+    }
     public void AddTool(ToolType tool)
     {
         ownedTools[tool] = true;

@@ -42,21 +42,26 @@ public class GlobalRessourceList : ScriptableObject
     
     
     // Utilisation de boucles imbriqués car perf négligeables car 12 items.
-    public void AddRessource(RessourceType type,RessourceItem item, int amount)
+    public void AddRessourceGlobal(RessourceType type,RessourceItem item, int amount) //Rajoute la ressource à l'inv global, verif si elle existe déjà, sinon la créer.
     {
+        if((!ToolManager.Instance.HasTool(item.toolType)))
+        {
+            return;
+        }
         for (int i = 0; i < ressources.Count; i++)
         {
             if (ressources[i].ressourceType == type)
             {
-                AddMoreRessource(type, item, i, amount);
+               
+                AddMoreRessourceGlobal(type, item, i, amount);
                 return;
             }
         }
-        AddNewRessource(type, item, amount);
     }
 
-    public void AddMoreRessource(RessourceType type, RessourceItem item, int iteration, int amount)
+    private void AddMoreRessourceGlobal(RessourceType type, RessourceItem item, int iteration, int amount) // Permet juste d'incrémenter dans l'inv global;
     {
+        
         var res = ressources[iteration];
         if (res.ressourceAmount + amount > 99)
         {
@@ -69,19 +74,20 @@ public class GlobalRessourceList : ScriptableObject
         ressources[iteration] = res;
     }
 
-    public void AddNewRessource(RessourceType type, RessourceItem item, int amount)
-    {
-        if (ToolManager.Instance.HasTool(item.toolType))
-        {
-            GlobalRessource res = new GlobalRessource
-            {
-                ressourceItem = item,
-                ressourceType = type,
-                ressourceAmount = amount
-            };
-
-            ressources.Add(res);
-        }
-    }
+    // private void AddNewRessourceGlobal(RessourceType type, RessourceItem item, int amount) // rajoute la ressource à l'inv
+    // {
+    //     if (!ToolManager.Instance.HasTool(item.toolType))
+    //     {
+    //         return;
+    //     }
+    //
+    //     GlobalRessource res = new GlobalRessource
+    //         {
+    //             ressourceItem = item,
+    //             ressourceType = type,
+    //             ressourceAmount = amount
+    //         };
+    //     ressources.Add(res);
+    // }
 
 }

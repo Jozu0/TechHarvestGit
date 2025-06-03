@@ -43,6 +43,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 0, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 0, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 1, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 1, y: 1}
@@ -72,6 +84,18 @@ MonoBehaviour:
   - tilesCoords: {x: 1, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 1, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 1, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 2, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -103,6 +127,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 2, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 2, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 3, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 3, y: 1}
@@ -132,6 +168,18 @@ MonoBehaviour:
   - tilesCoords: {x: 3, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 3, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 3, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 4, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -163,6 +211,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 4, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 4, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 5, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 5, y: 1}
@@ -192,6 +252,18 @@ MonoBehaviour:
   - tilesCoords: {x: 5, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 5, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 5, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 6, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -223,6 +295,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 6, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 6, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 7, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 7, y: 1}
@@ -252,6 +336,18 @@ MonoBehaviour:
   - tilesCoords: {x: 7, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 7, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 7, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 8, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -283,6 +379,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 8, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 8, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 9, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 9, y: 1}
@@ -313,6 +421,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 9, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 9, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 1}
@@ -330,9 +450,9 @@ MonoBehaviour:
   - tilesCoords: {x: 10, y: 7}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 8}
-    buildingsInWorld: {fileID: 11400000, guid: c52629300a66aa742942401764663636, type: 2}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 9}
-    buildingsInWorld: {fileID: 11400000, guid: ff35ce257c8dd5241b771cd0e48add72, type: 2}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 10}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 11}
@@ -342,6 +462,18 @@ MonoBehaviour:
   - tilesCoords: {x: 10, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 10, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 10, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 11, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -373,6 +505,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 11, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 11, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 12, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 12, y: 1}
@@ -402,6 +546,18 @@ MonoBehaviour:
   - tilesCoords: {x: 12, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 12, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 12, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 13, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -433,6 +589,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 13, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 13, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 14, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 14, y: 1}
@@ -462,6 +630,18 @@ MonoBehaviour:
   - tilesCoords: {x: 14, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 14, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 14, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 15, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -493,6 +673,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 15, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 15, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 16, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 16, y: 1}
@@ -522,6 +714,18 @@ MonoBehaviour:
   - tilesCoords: {x: 16, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 16, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 16, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 17, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -553,6 +757,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 17, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 17, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 18, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 18, y: 1}
@@ -582,6 +798,18 @@ MonoBehaviour:
   - tilesCoords: {x: 18, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 18, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 18, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 19, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -613,6 +841,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 19, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 19, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 20, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 20, y: 1}
@@ -642,6 +882,18 @@ MonoBehaviour:
   - tilesCoords: {x: 20, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 20, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 20, y: 20}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 21, y: 0}
     buildingsInWorld: {fileID: 0}
@@ -673,6 +925,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 21, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 21, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 22, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 22, y: 1}
@@ -703,6 +967,18 @@ MonoBehaviour:
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 22, y: 14}
     buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 22, y: 20}
+    buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 23, y: 0}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 23, y: 1}
@@ -732,4 +1008,268 @@ MonoBehaviour:
   - tilesCoords: {x: 23, y: 13}
     buildingsInWorld: {fileID: 0}
   - tilesCoords: {x: 23, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 23, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 24, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 25, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 26, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 27, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 28, y: 20}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 0}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 1}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 2}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 3}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 4}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 5}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 6}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 7}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 8}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 9}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 10}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 11}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 12}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 13}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 14}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 15}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 16}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 17}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 18}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 19}
+    buildingsInWorld: {fileID: 0}
+  - tilesCoords: {x: 29, y: 20}
     buildingsInWorld: {fileID: 0}

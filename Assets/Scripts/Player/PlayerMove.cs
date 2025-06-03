@@ -7,12 +7,10 @@ public class PlayerMove : MonoBehaviour
     private Vector2 moveDirection;
     private float currentMoveSpeed;
     
-    [SerializeField] private float normalMoveSpeed;
     [SerializeField] private StatisticData statisticData;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        currentMoveSpeed = normalMoveSpeed;
         if (statisticData.movementSpeed == 0)
         {
             statisticData.movementSpeed = currentMoveSpeed;

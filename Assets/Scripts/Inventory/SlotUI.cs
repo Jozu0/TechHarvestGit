@@ -9,45 +9,46 @@ public class SlotUI : MonoBehaviour
     [SerializeField] public RessourceItem actualRessourceItem;
     [SerializeField] public Image image;
     [SerializeField] public TextMeshProUGUI amountText;
-    [SerializeField] public int ressourceAmount;
+    private int ressourceAmount;
     [SerializeField] public GlobalRessourceList globalRessourceList;
-    [SerializeField] public int amountToAdd;
-     public StatisticData statisticData;
+    public StatisticData statisticData;
      
      
-     void Start()
+     void Awake()
     {
         image = GetComponent<Image>();
-        ressourceAmount = 0;
-        if (statisticData.fortuneBoost == 0)
-        {
-            statisticData.fortuneBoost = amountToAdd;
-        }
-        amountToAdd = statisticData.fortuneBoost;
-        
+
     }
 
+    void Start()
+    {
+        if (actualRessourceItem == null) // Only reset if it's a fresh slot
+        {
+            ressourceAmount = 0;
+        }
+    }
+     
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    public void AddNewItem(RessourceItem ressourceItem)
-    {
-        actualRessourceItem = ressourceItem;
-        if (ToolManager.Instance.HasTool(ressourceItem.toolType))
-        {
-            AddMoreItem();
-            gameObject.SetActive(true);
-        }
-        
-    }
-
     public void AddMoreItem()
     {
-        ressourceAmount+=amountToAdd;
+        ressourceAmount += statisticData.fortuneBoost;
         RefreshInventory(actualRessourceItem.itemSprite, ressourceAmount);
+    }
+
+    public void AddNewItem(RessourceItem ressourceItem)
+    {
+        if (!ToolManager.Instance.HasTool(ressourceItem.toolType))
+        { 
+            return;
+        }
+        actualRessourceItem = ressourceItem;
+        AddMoreItem();
+        gameObject.SetActive(true);
     }
 
     public void RefreshInventory(Sprite itemSprite, int amount)

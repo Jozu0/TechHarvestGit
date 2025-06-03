@@ -17,6 +17,8 @@ TagManager:
   - Grid
   - RessourceListManager
   - BuildingInUIContent
+  - MainUIPanel
+  - UpgradeUIPanel
   layers:
   - Default
   - TransparentFX

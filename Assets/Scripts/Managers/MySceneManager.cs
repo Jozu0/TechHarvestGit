@@ -7,18 +7,31 @@ public class MySceneManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
-    public void quitGame()
+    private void EditorSave()
     {
-        DOTween.KillAll();
-        #if UNITY_STANDALONE
-        Application.Quit();
-        #endif
         #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-                UnityEditor.EditorUtility.SetDirty(this);
-                UnityEditor.AssetDatabase.SaveAssets();
+            UnityEditor.EditorUtility.SetDirty(this);
+            UnityEditor.AssetDatabase.SaveAssets();
         #endif
-            
+    }
+
+    private void CleanBeforeSceneChange()
+    {
+        EditorSave();  // sauvegarde les ScriptableObjects dans l’éditeur
+        DOTween.KillAll();
+    }
+
+    public void quitGame()
+    { 
+        CleanBeforeSceneChange();
+
+        #if UNITY_STANDALONE
+            Application.Quit();
+        #endif
+
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
     public void Pause()
@@ -33,12 +46,12 @@ public class MySceneManager : MonoBehaviour
 
     public void LoadLevelFieldScene()
     {
-        DOTween.KillAll();
+        CleanBeforeSceneChange();
         SceneManager.LoadScene("LevelFieldScene");
     }
     public void LoadBuildingScene()
     {
-        DOTween.KillAll();
+        CleanBeforeSceneChange();
         SceneManager.LoadScene("CityBuildScene");
 
     }

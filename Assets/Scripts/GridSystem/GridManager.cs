@@ -36,7 +36,7 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 
-                tileList.AddNewTile(new Vector2(x,y), null);
+                tileList.AddNewTile(new Vector2(x,y), null,0);
                 
             }
         }
