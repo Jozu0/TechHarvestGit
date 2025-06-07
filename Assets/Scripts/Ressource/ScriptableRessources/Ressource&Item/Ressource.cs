@@ -14,7 +14,9 @@ public enum RessourceType
     Wheat,
     Wool,
     Sand,
-    Bone
+    Bone,
+    IronOre,
+    IronIngot
 }
 
 [CreateAssetMenu(fileName = "Ressource", menuName = "Scriptable Objects/Ressource")]

@@ -74,7 +74,7 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
         }
         else
         {
-            isInteractable = true;
+            NeedsVerification(null, 0);
             UpdateInteraction(null, 0); 
         }
     }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -28,18 +27,12 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
     [SerializeField] private GameObject upgradePanelUI;
     [SerializeField] private GameObject updateSkillPanelPrefab;
     [SerializeField] private GameObject craftItemPanelPrefab;
+    [SerializeField] private GameObject craftSkillUpgradeListParent;
+    public TileList tileList;
+
+    private bool skillUpgradeInstantiated = false;
+    private bool craftInstantiated = false;
     
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void GetBuilding()
     {
         if (buildingsInWorld != null)
@@ -55,16 +48,26 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
         actualObjectOnGrid = null;
         buildingsInMenu = null;
         buildingsInWorld = null;
+        craftInstantiated = false;
+        skillUpgradeInstantiated = false;
         DestroyNeededRessources();
+        DestroyCraftAndSkills();
     }
 
     public void UpdateBuildingUIUpgrade()
     {
+        DestroyCraftAndSkills();
         GetBuilding();
         bool canBeUpdated = false;
-        buildingBefore.sprite = buildingsInMenu.buildingSprite[actualObjectOnGrid.actualEvolutionState];
-        buildingNameText.text = buildingsInMenu.buildingName + " " + IntToRoman(actualObjectOnGrid.actualEvolutionState+1);
-        if (actualObjectOnGrid.actualEvolutionState < buildingsInMenu.maxEvoState)
+        buildingBefore.sprite = buildingsInMenu.buildingSprite[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState];
+        buildingNameText.text = buildingsInMenu.buildingName + " " + IntToRoman(tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState+1);
+        InstantiateSkillUpgrades();
+        InstantiateCraft();
+        float newHeight = 59*(
+            (buildingsInMenu.upgradeSkillList.upgradeSkillList.Count)+
+            (buildingsInMenu.craftList.craftList.Count));
+        craftSkillUpgradeListParent.GetComponent<RectTransform>().sizeDelta = new Vector2(200f, newHeight);   
+        if (tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState < buildingsInMenu.maxEvoState)
         {
             canBeUpdated = true;
             NeedsVerification();
@@ -74,13 +77,13 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
         {
             if (isInteractable)
             {
-                buildingAfter.sprite = buildingsInMenu.buildingSprite[actualObjectOnGrid.actualEvolutionState+1];
-                buildingNameDescriptionText.text = IntToRoman(actualObjectOnGrid.actualEvolutionState+1) + " to " + IntToRoman((actualObjectOnGrid.actualEvolutionState+2));
+                buildingAfter.sprite = buildingsInMenu.buildingSprite[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState+1];
+                buildingNameDescriptionText.text = IntToRoman(tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState+1) + " to " + IntToRoman((tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState+2));
                 SetAlpha(1,upgradePanelUI);
             }
             else
             {
-                buildingAfter.sprite = buildingsInMenu.buildingSprite[actualObjectOnGrid.actualEvolutionState+1];
+                buildingAfter.sprite = buildingsInMenu.buildingSprite[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState+1];
                 buildingNameDescriptionText.text = "Not Enough resources";
                 SetAlpha(alphaDisable,upgradePanelUI);
             }
@@ -101,6 +104,8 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
     {
         if (isInteractable)
         {
+            UpdateGlobalRessources();
+            EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
             actualObjectOnGrid.UpdateBuildingInWorld();
             UpdateBuildingUIUpgrade();
         }
@@ -114,17 +119,17 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
         if (!ressourcesNeededInstantiated)
         {
             for (int i = 0;
-                 i < buildingsInMenu.listNeedsToEvolves[actualObjectOnGrid.actualEvolutionState]
+                 i < buildingsInMenu.listNeedsToEvolves[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState]
                      .needsToEvolve.Count;
                  i++)
             {
                 GameObject spawnedNeed = Instantiate(itemNeedPrefab, needsToUpdate.transform);
                 spawnedNeed.GetComponent<Image>().sprite = buildingsInMenu
-                    .listNeedsToEvolves[actualObjectOnGrid.actualEvolutionState]
+                    .listNeedsToEvolves[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState]
                     .needsToEvolve[i].ressourceItemNeeded.itemSprite;
                 spawnedNeed.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text =
                     buildingsInMenu
-                        .listNeedsToEvolves[actualObjectOnGrid.actualEvolutionState]
+                        .listNeedsToEvolves[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState]
                         .needsToEvolve[i].ressourceAmountNeeded.ToString() + "x";
             }
 
@@ -132,6 +137,50 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
         }
     }
 
+    private void InstantiateSkillUpgrades()
+    {
+        if (!skillUpgradeInstantiated)
+        {
+            foreach (var t in buildingsInMenu.upgradeSkillList.upgradeSkillList)
+            {
+                GameObject instantiatedUpgradeSkill = Instantiate(updateSkillPanelPrefab, craftSkillUpgradeListParent.transform);
+                instantiatedUpgradeSkill.GetComponent<SkillUpgradeUI>().localPos = actualObjectOnGrid.localPos;
+                instantiatedUpgradeSkill.GetComponent<SkillUpgradeUI>().upgradeSkill = t;
+                Debug.Log(t.name);
+            }
+
+            skillUpgradeInstantiated = true;
+        }
+        
+    }
+
+    private void InstantiateCraft()
+    {
+        if (!craftInstantiated)
+        {
+            foreach (var t in buildingsInMenu.craftList.craftList)
+            {
+                GameObject instantiatedCraft = Instantiate(craftItemPanelPrefab, craftSkillUpgradeListParent.transform);
+                instantiatedCraft.GetComponent<CraftUI>().localPos = actualObjectOnGrid.localPos;
+                instantiatedCraft.GetComponent<CraftUI>().craft = t;
+            }
+
+            craftInstantiated = true;
+        }
+        
+    }
+
+    private void DestroyCraftAndSkills()
+    {
+        foreach (Transform child in craftSkillUpgradeListParent.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        skillUpgradeInstantiated = false;
+        craftInstantiated = false;
+    }
+    
+    
     private void DestroyNeededRessources()
     {
         foreach (Transform child in needsToUpdate.transform)
@@ -141,12 +190,36 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
 
         ressourcesNeededInstantiated = false;
     }
+
+    private void UpdateGlobalRessources()
+    {
+        int typeOfBuildInt = (int)buildingsInWorld.buildingType;
+
+        if (typeOfBuildInt >= 0 && typeOfBuildInt < buildingsInMenuList.buildingInMenu.Count)
+        {
+            foreach (var t in buildingsInMenu.listNeedsToEvolves)
+            {
+                if (t.evolveStateNeed == tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState)
+                {
+                    foreach (var itemNeeded in t.needsToEvolve)
+                    {
+                        globalRessourceList.DeleteRessource(
+                            itemNeeded.ressourceItemNeeded.ressourceType,
+                            itemNeeded.ressourceAmountNeeded
+                        );
+                    }
+                    return;
+                }
+            }
+           
+        }
+    }
     
     private void NeedsVerification()
     {
-        int totalRessourceNeeded = buildingsInMenu.itemNeeds.Count;
+        List<BuildingsInMenu.NeedsToEvolve> needsToEvolve = buildingsInMenu.listNeedsToEvolves[tileList.GetTile(actualObjectOnGrid.localPos).currentEvolveState].needsToEvolve;
+        int totalRessourceNeeded = needsToEvolve.Count;
         int totalRessourceOwned = 0;
-        List<BuildingsInMenu.NeedsToEvolve> needsToEvolve = buildingsInMenu.listNeedsToEvolves[actualObjectOnGrid.actualEvolutionState].needsToEvolve;
         
             foreach (var needed in needsToEvolve)
             {
@@ -176,7 +249,7 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
     
     private void SetAlpha(float alpha,GameObject gameObject)
     {
-        gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, alpha); ;
+        gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, alpha);
         Image[] images = gameObject.GetComponentsInChildren<Image>(true); 
         foreach (Image img in images)
         {
@@ -198,7 +271,7 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
             tmp.ForceMeshUpdate(); }
     }
     
-    private string IntToRoman(int intToRomanize)
+    private string IntToRoman(int intToRomanise)
     {
         Dictionary<string, int> romanNumbersDictionary = new()
         {
@@ -207,10 +280,10 @@ public class BuildingUpgradeUIBehaviour : MonoBehaviour
         };
         string romanResult = "";
         foreach(var item in romanNumbersDictionary.Reverse()) {
-            if (intToRomanize <= 0) break;
-            while (intToRomanize >= item.Value) {
+            if (intToRomanise <= 0) break;
+            while (intToRomanise >= item.Value) {
                 romanResult += item.Key;
-                intToRomanize -= item.Value;
+                intToRomanise -= item.Value;
             }
         }
         return romanResult;

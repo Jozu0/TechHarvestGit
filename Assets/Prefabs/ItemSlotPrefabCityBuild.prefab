@@ -130,9 +130,7 @@ MonoBehaviour:
   actualRessourceItem: {fileID: 0}
   image: {fileID: 3491784516861989592}
   amountText: {fileID: 4260068121734315324}
-  ressourceAmount: 0
   globalRessourceList: {fileID: 11400000, guid: 3b1900359dade9c489d56994adca1f9e, type: 2}
-  amountToAdd: 0
   statisticData: {fileID: 11400000, guid: 04a89c17054eebc40a620305e890f063, type: 2}
 --- !u!222 &3282043637668149579
 CanvasRenderer:

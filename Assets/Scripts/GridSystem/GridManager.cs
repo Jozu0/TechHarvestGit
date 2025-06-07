@@ -35,8 +35,23 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                
-                tileList.AddNewTile(new Vector2(x,y), null,0);
+                TileData newTile = new TileData
+                {
+                    tileCoords = new Vector2Int(x, y),
+                    buildingsInWorld = null,
+                    currentEvolveState = 0,
+                    numberOfHouseMaxUpgradeSkill = 0,
+                    numberOfForgeMaxUpgradeSkill = 0,
+                    numberOfVillagerInHouse = 0,
+                    numberOfForgingUpgradeSkill = 0,
+                    knifeSkill = false,
+                    hoeSkill = false,
+                    shearsSkill = false,
+                    hammerSkill = false,
+                    fishingRodSkill = false,
+                };
+
+                tileList.AddNewTile(newTile);
                 
             }
         }
@@ -49,11 +64,11 @@ public class GridManager : MonoBehaviour
         {
             GameObject instance = Instantiate(
                 tileObjectPrefab,
-                new Vector2((float)(1.5f * tile.tilesCoords.x + 0.5f), (float)(1.5f * tile.tilesCoords.y + 0.5f)),
+                new Vector2((float)(1.5f * tile.tileCoords.x + 0.5f), (float)(1.5f * tile.tileCoords.y + 0.5f)),
                 Quaternion.identity,
                 tileObjectList.transform
             );
-            if (((int)tile.tilesCoords.x + (int)tile.tilesCoords.y) % 2 == 1)
+            if (((int)tile.tileCoords.x + (int)tile.tileCoords.y) % 2 == 1)
             {
                 instance.GetComponent<SpriteRenderer>().color = lightGreen;
             }
@@ -62,7 +77,7 @@ public class GridManager : MonoBehaviour
                 instance.GetComponent<SpriteRenderer>().color = darkGreen;
             }
             instance.GetComponent<ObjectOnGrid>().buildingsInWorld = tile.buildingsInWorld;
-            instance.name = tile.tilesCoords.x + "," + tile.tilesCoords.y;
+            instance.name = tile.tileCoords.x + "," + tile.tileCoords.y;
         }
         tileObjectList.transform.position = new Vector2(0.255f,0.255f);
     }

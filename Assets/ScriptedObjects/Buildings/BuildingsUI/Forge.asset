@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
   m_Name: Forge
   m_EditorClassIdentifier: 
-  evolveState: 0
+  maxEvoState: 0
   currentAmountOfBuildings: 0
   buildingType: 2
   buildingSprite:
@@ -31,3 +31,5 @@ MonoBehaviour:
     ressourceAmountNeeded: 10
   needsToEvolve: []
   listNeedsToEvolves: []
+  craftList: {fileID: 11400000, guid: c559753b5474cff4aa8c34aa4178586c, type: 2}
+  upgradeSkillList: {fileID: 11400000, guid: e9770cc9ee5031742a336e44930d9f11, type: 2}

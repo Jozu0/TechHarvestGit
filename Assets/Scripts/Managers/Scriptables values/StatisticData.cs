@@ -10,5 +10,32 @@ public class StatisticData : ScriptableObject
     public float movementSpeed;
     public float bulletSpeed;
     public float bulletRate;
-    public int bulletDamage;
+    public float bulletDamage;
+    public int totalVillagers;
+
+    void Awake()
+    {
+        bulletRate=GetBulletDelay(totalVillagers);
+    }
+    
+    public float GetBulletDelay(int citizenCount, int maxCitizens = 60)
+    {
+        citizenCount = Mathf.Clamp(citizenCount, 0, maxCitizens);
+
+        float baseDelay = 1.0f;
+        float minDelay = 0.25f;
+
+        // Progression non linéaire avec exponentielle inverse
+        float t = (float)citizenCount / maxCitizens;
+
+        // Courbe ease-out : rapide au début, plus lent ensuite
+        float curvedT = 1 - Mathf.Pow(1 - t, 2); // équivalent à "easeOutQuad"
+
+        float delay = Mathf.Lerp(baseDelay, minDelay, curvedT);
+
+        return delay;
+    }
+
+    
 }
+

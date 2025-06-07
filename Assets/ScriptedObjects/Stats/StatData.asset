@@ -15,5 +15,6 @@ MonoBehaviour:
   fortuneBoost: 1
   movementSpeed: 10
   bulletSpeed: 8
-  bulletRate: 0.5
+  bulletRate: 1
   bulletDamage: 1
+  totalVillagers: 0

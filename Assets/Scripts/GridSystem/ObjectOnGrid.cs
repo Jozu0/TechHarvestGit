@@ -26,21 +26,21 @@ public class ObjectOnGrid : MonoBehaviour
     [SerializeField] private BuildingUpgradeUIBehaviour upgradeUIPanel;
     private static SpriteRenderer currentSpriteRenderer = null;
     private static Tween flashTween = null;
-    private Vector2 localPos;
-    public int actualEvolutionState ;
+    public Vector2Int localPos;
     void Start()
     {
         gridPlacementSystem = GameObject.FindGameObjectWithTag("Grid").GetComponent<GridPlacementSystem>();
         UIManager = GameObject.FindGameObjectWithTag("MainUIPanel").GetComponent<UIManager>();
         upgradeUIPanel = UIManager.UIUpgradeManagementGameObject.GetComponent<BuildingUpgradeUIBehaviour>();
         gridPlacementSystem.isBuildingSelected = false;
-        localPos = new Vector2(
-                (((transform.position.x - 0.5f) / 1.5f) - 0.17f),
-                ((transform.position.y - 0.5f) / 1.5f) - 0.17f);
-        actualEvolutionState = tileList.GetCurrentEvolveState(localPos);
+        localPos = new Vector2Int(
+                (int)(((transform.position.x - 0.5f) / 1.5f) - 0.17f),
+                (int)(((transform.position.y - 0.5f) / 1.5f) - 0.17f));
         UpdateContent();
     }
 
+    
+    
     void UpdateContent()
     {
         if (buildingsInWorld==null)
@@ -52,7 +52,7 @@ public class ObjectOnGrid : MonoBehaviour
         {
             isEmpty = false;
             buildingOnGrid.SetActive(true);
-            buildingOnGrid.GetComponent<SpriteRenderer>().sprite = buildingsInWorld.buildingSpriteList[actualEvolutionState];
+            buildingOnGrid.GetComponent<SpriteRenderer>().sprite = buildingsInWorld.buildingSpriteList[tileList.GetTile(localPos).currentEvolveState];
 
         }
     }
@@ -133,12 +133,8 @@ public class ObjectOnGrid : MonoBehaviour
             buildingsInWorld = gridPlacementSystem.buildingsSelected;
             UpdateContent();
             gridPlacementSystem.NoMoreBuildings();
-            tileList.ModifyTile(
-                new Vector2(
-                    ((transform.position.x - 0.5f) / 1.5f) - 0.17f,
-                    ((transform.position.y - 0.5f) / 1.5f) - 0.17f
-                ), 
-                buildingsInWorld,0);
+            tileList.ModifyTile(localPos, 
+                tile => tile.buildingsInWorld = buildingsInWorld);
             UpdateBuildingAmount();
             UpdateGlobalRessources();
             EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
@@ -152,7 +148,6 @@ public class ObjectOnGrid : MonoBehaviour
             
             upgradeUIPanel.buildingsInWorld = buildingsInWorld;
             upgradeUIPanel.actualObjectOnGrid = this;
-            upgradeUIPanel.UpdateBuildingUIUpgrade();
             if (upgradeUIPanel.isInteractable)
             {
                 upgradeUIPanel.DisplayNeededRessources();
@@ -168,14 +163,9 @@ public class ObjectOnGrid : MonoBehaviour
 
     public void UpdateBuildingInWorld()
     {
-        actualEvolutionState += 1;
-        buildingOnGrid.GetComponent<SpriteRenderer>().sprite =  buildingsInWorld.buildingSpriteList[actualEvolutionState];
-        tileList.ModifyTile(
-            new Vector2(
-                ((transform.position.x - 0.5f) / 1.5f) - 0.17f,
-                ((transform.position.y - 0.5f) / 1.5f) - 0.17f
-            ),
-            buildingsInWorld, actualEvolutionState);
+        tileList.GetTile(localPos).currentEvolveState += 1;
+        buildingOnGrid.GetComponent<SpriteRenderer>().sprite =  buildingsInWorld.buildingSpriteList[tileList.GetTile(localPos).currentEvolveState];
+        tileList.ModifyTile(localPos, tile => tile.currentEvolveState = tileList.GetTile(localPos).currentEvolveState);
     }
     
     

@@ -4,7 +4,7 @@ public class PlayerShoot : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private BulletPool bulletPool;
-    [SerializeField] private float cooldown;
+    private float cooldown;
     [SerializeField] private float currentTime;
     [SerializeField] private int bulletDamage;
     [SerializeField] private GameObject activeBulletQueue;
@@ -12,11 +12,8 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
         activeBulletQueue = GameObject.FindGameObjectWithTag("PooledBullet");
-        if (statisticData.bulletRate == 0)
-        {
-            statisticData.bulletRate = cooldown;
-        }
         cooldown = statisticData.bulletRate;
+        cooldown = 0.4f;
     }
 
     

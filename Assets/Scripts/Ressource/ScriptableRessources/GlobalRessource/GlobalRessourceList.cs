@@ -18,6 +18,8 @@ public class GlobalRessourceList : ScriptableObject
     public List<GlobalRessource> ressources = new List<GlobalRessource>();
 
 
+    
+    
     public void DeleteRessource(RessourceType ressourceType, int ressourceAmount)
     {
         for (int i = 0; i < ressources.Count; i++)
@@ -41,53 +43,33 @@ public class GlobalRessourceList : ScriptableObject
     }
     
     
+    
     // Utilisation de boucles imbriqués car perf négligeables car 12 items.
-    public void AddRessourceGlobal(RessourceType type,RessourceItem item, int amount) //Rajoute la ressource à l'inv global, verif si elle existe déjà, sinon la créer.
+    public void AddRessource(RessourceType type, RessourceItem item, int amount) //Rajoute la ressource à l'inv global, verif si elle existe déjà, sinon la créer.
     {
-        if((!ToolManager.Instance.HasTool(item.toolType)))
+        if ((!ToolManager.Instance.HasTool(item.toolType)))
         {
             return;
         }
+
         for (int i = 0; i < ressources.Count; i++)
         {
             if (ressources[i].ressourceType == type)
             {
-               
-                AddMoreRessourceGlobal(type, item, i, amount);
+
+                var res = ressources[i];
+                if (res.ressourceAmount + amount > 99)
+                {
+                    res.ressourceAmount = 99;
+                }
+                else
+                {
+                    res.ressourceAmount += amount;
+                }
+
+                ressources[i] = res;
                 return;
             }
         }
     }
-
-    private void AddMoreRessourceGlobal(RessourceType type, RessourceItem item, int iteration, int amount) // Permet juste d'incrémenter dans l'inv global;
-    {
-        
-        var res = ressources[iteration];
-        if (res.ressourceAmount + amount > 99)
-        {
-            res.ressourceAmount=99;
-        }
-        else
-        {
-            res.ressourceAmount+=amount;
-        }
-        ressources[iteration] = res;
-    }
-
-    // private void AddNewRessourceGlobal(RessourceType type, RessourceItem item, int amount) // rajoute la ressource à l'inv
-    // {
-    //     if (!ToolManager.Instance.HasTool(item.toolType))
-    //     {
-    //         return;
-    //     }
-    //
-    //     GlobalRessource res = new GlobalRessource
-    //         {
-    //             ressourceItem = item,
-    //             ressourceType = type,
-    //             ressourceAmount = amount
-    //         };
-    //     ressources.Add(res);
-    // }
-
 }

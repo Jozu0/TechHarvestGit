@@ -33,14 +33,14 @@ public class ShootingRessourceManager : MonoBehaviour
                 {
                     ressource.GetComponent<SlotUI>().AddMoreItem();
                         // On ajoute +n item dans la liste
-                    globalRessourceList.AddRessourceGlobal(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); 
+                    globalRessourceList.AddRessource(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); 
                         // Rajoute le nouvel item dans l'inv global;
                     break;
                 }
                 else if(ressource.GetComponent<SlotUI>().actualRessourceItem==null) // Le slot est vide et puisque elseif, l'objet n'existe pas plus haut
                 {
                     ressource.GetComponent<SlotUI>().AddNewItem(ressourceItem); // On ajoute le nouvel item
-                    globalRessourceList.AddRessourceGlobal(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); // Rajoute le nouvel item dans l'inv global;
+                    globalRessourceList.AddRessource(ressourceItem.ressourceType,ressourceItem, statisticData.fortuneBoost); // Rajoute le nouvel item dans l'inv global;
                     break;
                 }
                     

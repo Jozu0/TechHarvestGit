@@ -38,3 +38,5 @@ MonoBehaviour:
     - ressourceItemNeeded: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
       ressourceAmountNeeded: 5
     evolveStateNeed: 0
+  craftList: {fileID: 11400000, guid: 7d30e52821678ec4ea984f0b791af94c, type: 2}
+  upgradeSkillList: {fileID: 11400000, guid: 25bc72d9288b59c4f850cd14665a9d0a, type: 2}

@@ -28,7 +28,7 @@ public class BuildingsInMenu : ScriptableObject
         public RessourceItem ressourceItemNeeded;
         public int ressourceAmountNeeded;
     }
-
+    
     public int maxEvoState;
     public int currentAmountOfBuildings;
     public BuildingType buildingType;
@@ -42,7 +42,7 @@ public class BuildingsInMenu : ScriptableObject
     public List<NeedsToEvolve> needsToEvolve = new List<NeedsToEvolve>();
     [SerializeField]
     public List<ListNeedsToEvolves> listNeedsToEvolves = new List<ListNeedsToEvolves>();
-    
-    
+    public CraftList craftList;
+    public UpgradeSkillList upgradeSkillList;
    
 }

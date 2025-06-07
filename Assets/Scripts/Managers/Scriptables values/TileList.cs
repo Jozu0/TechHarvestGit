@@ -15,45 +15,43 @@ public class TileList : ScriptableObject
     }
     
     [SerializeField]
-    public List<allTiles> tiles = new List<allTiles>();
+    public List<TileData> tiles = new List<TileData>();
 
-    public void AddNewTile(Vector2 tileCoords, BuildingsInWorld buildingsInWorld, int currentEvolveState)
+    public Dictionary<Vector2Int, TileData> tileDict = new Dictionary<Vector2Int, TileData>();
+    
+    private void OnEnable()
     {
-        allTiles tile = new allTiles();
+        tileDict.Clear();
+        foreach (var tile in tiles)
         {
-            tile.tilesCoords = tileCoords;
-            tile.buildingsInWorld = buildingsInWorld;
-            tile.currentEvolveState = currentEvolveState;
+            tileDict[tile.tileCoords] = tile;
+
         }
+    }
+    public TileData GetTile(Vector2Int coords)
+    {
+        if(tileDict.TryGetValue(coords, out TileData tile))
+        {
+            return tile;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public void ModifyTile(Vector2Int coords, System.Action<TileData> modifyAction)
+    {
+        if (tileDict.TryGetValue(coords, out TileData tile))
+        {
+            modifyAction(tile);
+        }
+    }
+    
+    public void AddNewTile(TileData tile)
+    {
         tiles.Add(tile);
-    }
-
-    public void ModifyTile(Vector2 tileCoords, BuildingsInWorld buildingsInWorld, int currentEvolveState)
-    {
-        for (int i = 0; i < tiles.Count; i++)
-        {
-            if (tiles[i].tilesCoords == tileCoords)
-            {
-                var temp = tiles[i]; // copie
-                temp.buildingsInWorld = buildingsInWorld;
-                temp.currentEvolveState = currentEvolveState;
-                tiles[i] = temp; 
-                Debug.Log("Modifying tile");
-            }
-        }
-    }
-
-    public int GetCurrentEvolveState(Vector2 tileCoords)
-    {
-        for (int i = 0; i < tiles.Count; i++)
-        {
-            if (tiles[i].tilesCoords == tileCoords)
-            {
-                return tiles[i].currentEvolveState;
-            }
-        }
-
-        return 0;
+        tileDict[tile.tileCoords] = tile;
     }
 }
 

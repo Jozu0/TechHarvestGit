@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740c33791ba3acd4da303ffbbaca6102, type: 3}
+  m_Name: ForgeIronCraft
+  m_EditorClassIdentifier: 
+  craftItem:
+    needsToCraft:
+    - ressourceItemNeeded: {fileID: 11400000, guid: b52fdc78069f9c5469d2b269e3ca6c4c, type: 2}
+      ressourceAmountNeeded: 1
+    - ressourceItemNeeded: {fileID: 11400000, guid: f49b608411bc0364aa131d2ea589d051, type: 2}
+      ressourceAmountNeeded: 2
+    craftSprite: {fileID: -568405618, guid: e24ab6ceae4b5fa48b0232249a88496d, type: 3}
+    craftName: Iron Ingot
+    itemCrafted: {fileID: 11400000, guid: 7d219fb0b3682904a80d2e8da87b82e4, type: 2}
+    amountToCraft: 1
