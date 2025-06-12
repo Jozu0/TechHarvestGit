@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BuildingType {Manor, House, Forge, Farm, Quarry, WizardTower, Lumber}
+public enum BuildingType {Manor, House, Forge, Farm, Quarry, WizardTower, Lumber,Tavern}
 
 [CreateAssetMenu(fileName = "BuildingsInMenu", menuName = "Scriptable Objects/BuildingsInMenu")]
 
@@ -30,6 +30,7 @@ public class BuildingsInMenu : ScriptableObject
     }
     
     public int maxEvoState;
+    public int manorEvolveStateMin;
     public int currentAmountOfBuildings;
     public BuildingType buildingType;
     public List<Sprite> buildingSprite = new List<Sprite>();

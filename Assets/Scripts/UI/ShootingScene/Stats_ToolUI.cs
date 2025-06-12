@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -27,11 +28,13 @@ public class Stats_ToolUI : MonoBehaviour
 
     void UpdateToolsOwned()
     {
-        foreach (GameObject tool in toolList.transform)
+        foreach (Transform child in toolList.transform)
         {
-            if (ToolManager.Instance.HasTool((ToolType)System.Enum.Parse( typeof(ToolType), tool.name )))
+            GameObject tool = child.gameObject;
+            if (Enum.TryParse(tool.name, out ToolType parsedToolType))
             {
-                tool.SetActive(true);
+                if (ToolManager.Instance.HasTool(parsedToolType))
+                    tool.SetActive(true);
             }
         }
     }

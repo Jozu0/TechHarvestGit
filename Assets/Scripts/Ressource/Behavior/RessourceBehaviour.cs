@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 
@@ -20,8 +22,9 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
     private Rigidbody2D rb2D;
     private GameObject pooledObjects;
     private ShootingRessourceManager ressourceManager;
-    
-    [SerializeField] private float ressourcesSpeed;
+    [SerializeField] private Light2D ressourceLight;
+
+    private float ressourcesSpeed;
     
     
     protected override (GameEventType, Action<object,float>)[] GetEventBindings()
@@ -37,16 +40,22 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        ressourcesSpeed = GameObject.FindGameObjectWithTag("BackgroundQuad").GetComponent<Parallax>().ressourcesSpeed;
         currentRessourcesList = ressourcesListBiome1; 
         spriteRenderer = GetComponent<SpriteRenderer>();
         pooledObjects = GameObject.FindGameObjectWithTag("PooledObject");
         ressourceManager = GameObject.FindGameObjectWithTag("RessourceManager").GetComponent<ShootingRessourceManager>();
+        ressourceLight.intensity = 0.5f;
+        DOTween.To(() => ressourceLight.intensity, x => ressourceLight.intensity = x, 1.5f, 0.5f)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.Linear);
     }
     
     // Update is called once per frame
     void Update()
     {
         rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x, -ressourcesSpeed);
+        ressourceLight.lightCookieSprite = spriteRenderer.sprite;
     }
 
     new void OnEnable()
@@ -76,7 +85,7 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
     private void OnRessourceHitBehaviour(object data, float damage)
     {
         if (!ReferenceEquals((GameObject)data, this.gameObject)) return;
-        if (currentRessourceHP > 1)
+        if (currentRessourceHP-(int)damage > 1)
         {
             currentRessourceHP-=(int)damage;
         }
@@ -91,7 +100,6 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
         if ((GameObject)data != this.gameObject) return;
         gameObject.SetActive(false);
         ressourceManager.AddItem(currentRessourceToSpawn);
-        Debug.Log(currentRessourceToSpawn);
     }
 
     private void OnRessourceInitializationBehaviour()

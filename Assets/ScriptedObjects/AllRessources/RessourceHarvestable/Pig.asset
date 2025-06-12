@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131233db144ddc34aa9b530fcbaac19b, type: 3}
   m_Name: Pig
   m_EditorClassIdentifier: 
-  HP: 5
+  HP: 4
   ressourceSprite:
   - {fileID: 4061367860990768865, guid: 570b0ebec850e1e478ac71c50f5e9b87, type: 3}
   - {fileID: 5330538968372304643, guid: 0c112761a5e34544e9ff8458acf338ba, type: 3}

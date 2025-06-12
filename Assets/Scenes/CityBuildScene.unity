@@ -174,7 +174,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3106392117832939379, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1009678631}
   m_SourcePrefab: {fileID: 100100000, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
 --- !u!1 &511331071
 GameObject:
@@ -274,7 +277,7 @@ MonoBehaviour:
   tileList: {fileID: 11400000, guid: c173d4d9b37f6674887989f8cadaab8a, type: 2}
   tileObjectPrefab: {fileID: 3429574916306582072, guid: 50643ea8c60c8944f9ae0b17d393f9fb, type: 3}
   lightGreen: {r: 0.6627451, g: 0.73333335, b: 0.4, a: 1}
-  darkGreen: {r: 0.5372549, g: 0.6392157, b: 0.3137255, a: 1}
+  darkGreen: {r: 0.6627451, g: 0.73333335, b: 0.4, a: 1}
 --- !u!114 &768488845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +304,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9288df58f8c1e274f90e53579de18a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1009678627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3106392117832939379, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
+  m_PrefabInstance: {fileID: 352563834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1009678631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009678627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e220892549c6b249b257090782975f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicSource: {fileID: 0}
+  SFXSource: {fileID: 0}
+  WalkingSource: {fileID: 0}
+  SFXLoopSource: {fileID: 0}
+  AudioMixer: {fileID: 0}
+  menuMusic: {fileID: 0}
+  backgroundNoise: {fileID: 0}
+  death: {fileID: 0}
+  walk: {fileID: 0}
+  damageTakenCube: {fileID: 0}
+  swordAttack: {fileID: 0}
+  swordHeal: {fileID: 0}
+  colorChangeCube: {fileID: 0}
+  enemyDying: {fileID: 0}
+  enemyAttack: {fileID: 0}
+  pushCube: {fileID: 0}
+  enemyGetHit: {fileID: 0}
+  enemyClap: {fileID: 0}
+  randomScaryNoise1: {fileID: 0}
+  randomScaryNoise2: {fileID: 0}
+  doorOpen: {fileID: 0}
+  pressurePlateActivate: {fileID: 0}
+  caveNoise: {fileID: 0}
+  click: {fileID: 0}
 --- !u!1001 &1035838256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,8 +608,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.9993048
-    height: 0.99953634
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

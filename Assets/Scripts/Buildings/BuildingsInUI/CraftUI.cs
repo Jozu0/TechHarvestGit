@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ public class CraftUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI craftNameText;
     [SerializeField] private GameObject needList;
     [SerializeField] private GameObject itemNeedPrefab; 
+    [SerializeField] public ObjectOnGrid objectOnGrid;
     private bool ressourcesNeededInstantiated = false;
 
     void Start()
@@ -30,6 +32,7 @@ public class CraftUI : MonoBehaviour
         {
             UpdateGlobalRessources();
             UpdateSkillUI();
+            PlayInteractionAnimation();
         }
         EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
     }
@@ -146,6 +149,13 @@ public class CraftUI : MonoBehaviour
             c.a = alpha;
             tmp.color = c;
             tmp.ForceMeshUpdate(); }
+    }
+    
+    void PlayInteractionAnimation()
+    {
+        gameObject.transform.localScale = Vector3.zero;
+        gameObject.transform.DOScale(Vector3.one, 0.3f)
+            .SetEase(Ease.OutBack,1f); // Effet de rebond smooth
     }
 }
 

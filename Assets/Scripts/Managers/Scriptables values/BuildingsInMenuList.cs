@@ -5,4 +5,10 @@ using UnityEngine;
 public class BuildingsInMenuList : ScriptableObject
 {
     public List<BuildingsInMenu> buildingInMenu = new List<BuildingsInMenu>();
+    public int currentManorEvolveState;
+
+    public void UpdateManorEvolveState(int currentState)
+    {
+        currentManorEvolveState = currentState;
+    }
 }

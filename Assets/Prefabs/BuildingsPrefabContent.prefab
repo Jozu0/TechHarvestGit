@@ -379,8 +379,9 @@ MonoBehaviour:
   buildingSpriteComponent: {fileID: 2093692583906671977}
   globalRessourceList: {fileID: 11400000, guid: 3b1900359dade9c489d56994adca1f9e, type: 2}
   neededItemPrefab: {fileID: 2693370874776448225, guid: acecd30a210a6e84fb1302e103ff00c0, type: 3}
-  currentAmountOfBuildings: 0
   gridPlacementSystem: {fileID: 0}
+  buildingInUIInstantiate: {fileID: 0}
+  buildingsInMenuList: {fileID: 11400000, guid: 90c3c36cd6a7d17469e84206e97eed95, type: 2}
   alphaDisable: 0.7
 --- !u!114 &4497490759971331516
 MonoBehaviour:

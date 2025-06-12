@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3028095034d188a44b3b72d38cc7feab, type: 3}
   m_Name: Forge
   m_EditorClassIdentifier: 
-  buildingSpriteList:
-  - {fileID: 731454507, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   coordinates: 
   buildingType: 2
   evolveState: 0
+  buildingSpriteList:
+  - spritesPerSkill:
+    - {fileID: 1778897662, guid: 555e4179135f226498340bdda2a075ba, type: 3}

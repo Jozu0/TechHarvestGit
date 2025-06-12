@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics.Tracing;
 using System.Linq;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
     private bool isInteractable;
     [SerializeField] private GridPlacementSystem gridPlacementSystem;
     [SerializeField] private BuildingInUIInstantiate buildingInUIInstantiate;
+    [SerializeField] private BuildingsInMenuList buildingsInMenuList;
 
     [SerializeField] private float alphaDisable;
     
@@ -88,6 +90,7 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
     {
         if (isInteractable)
         {
+            PlayInteractionAnimation();
             gridPlacementSystem.isBuildingSelected = true;
             gridPlacementSystem.buildingsSelected = buildingsInMenu.buildingsInWorld;
             UpdateBuildingSelected(null, 0);
@@ -105,7 +108,8 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
     }
     private void NeedsVerification(object none, float zero)
     {
-        if (buildingsInMenu.currentAmountOfBuildings < buildingsInMenu.maximumNumberOfBuildings)
+        if (buildingsInMenu.currentAmountOfBuildings < buildingsInMenu.maximumNumberOfBuildings && 
+            buildingsInMenuList.currentManorEvolveState>=buildingsInMenu.manorEvolveStateMin)
         {
             int totalRessourceNeeded = buildingsInMenu.itemNeeds.Count;
             int totalRessourceOwned = 0;
@@ -164,5 +168,12 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
             c.a = alpha;
             tmp.color = c;
             tmp.ForceMeshUpdate(); }
+    }
+    
+    void PlayInteractionAnimation()
+    {
+        gameObject.transform.localScale = Vector3.zero;
+        gameObject.transform.DOScale(Vector3.one, 0.3f)
+            .SetEase(Ease.OutBack,1f); // Effet de rebond smooth
     }
 }

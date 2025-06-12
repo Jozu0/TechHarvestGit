@@ -24,6 +24,7 @@ public class ObjectOnGrid : MonoBehaviour
     [SerializeField] private GlobalRessourceList globalRessourceList;
     [SerializeField] private UIManager UIManager;
     [SerializeField] private BuildingUpgradeUIBehaviour upgradeUIPanel;
+    [SerializeField] private StatisticData statisticData;
     private static SpriteRenderer currentSpriteRenderer = null;
     private static Tween flashTween = null;
     public Vector2Int localPos;
@@ -52,8 +53,7 @@ public class ObjectOnGrid : MonoBehaviour
         {
             isEmpty = false;
             buildingOnGrid.SetActive(true);
-            buildingOnGrid.GetComponent<SpriteRenderer>().sprite = buildingsInWorld.buildingSpriteList[tileList.GetTile(localPos).currentEvolveState];
-
+            GetSprite();
         }
     }
     
@@ -131,13 +131,19 @@ public class ObjectOnGrid : MonoBehaviour
         if (gridPlacementSystem.isBuildingSelected && isEmpty == true)
         {
             buildingsInWorld = gridPlacementSystem.buildingsSelected;
+            if (buildingsInWorld.buildingType == BuildingType.House)
+            {
+                statisticData.totalVillagers +=1;
+            }
             UpdateContent();
+            PlayInteractionAnimation();
             gridPlacementSystem.NoMoreBuildings();
             tileList.ModifyTile(localPos, 
                 tile => tile.buildingsInWorld = buildingsInWorld);
             UpdateBuildingAmount();
             UpdateGlobalRessources();
             EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
+            
             return;
         }
         
@@ -148,6 +154,7 @@ public class ObjectOnGrid : MonoBehaviour
             
             upgradeUIPanel.buildingsInWorld = buildingsInWorld;
             upgradeUIPanel.actualObjectOnGrid = this;
+            PlayInteractionAnimation();
             if (upgradeUIPanel.isInteractable)
             {
                 upgradeUIPanel.DisplayNeededRessources();
@@ -164,10 +171,14 @@ public class ObjectOnGrid : MonoBehaviour
     public void UpdateBuildingInWorld()
     {
         tileList.GetTile(localPos).currentEvolveState += 1;
-        buildingOnGrid.GetComponent<SpriteRenderer>().sprite =  buildingsInWorld.buildingSpriteList[tileList.GetTile(localPos).currentEvolveState];
         tileList.ModifyTile(localPos, tile => tile.currentEvolveState = tileList.GetTile(localPos).currentEvolveState);
+        GetSprite();
     }
-    
+
+    public void UpdateSkillInWorld()
+    {
+        GetSprite();
+    }
     
 
     void UpdateBuildingAmount()
@@ -217,6 +228,50 @@ public class ObjectOnGrid : MonoBehaviour
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.InOutSine);
     }
-  
+    
+    void PlayInteractionAnimation()
+    {
+        buildingOnGrid.transform.localScale = Vector3.zero;
+        buildingOnGrid.transform.DOScale(Vector3.one, 0.3f)
+            .SetEase(Ease.OutBack); // Effet de rebond smooth
+    }
+
+
+    public void GetSprite()
+    {
+        switch (buildingsInWorld.buildingType)
+        {
+            case BuildingType.House:
+            {
+                int currentEvolveState = tileList.GetTile(localPos).currentEvolveState;     
+                int currentSkillLevel = tileList.GetTile(localPos).numberOfVillagerInHouse - 1;
+                buildingOnGrid.GetComponent<SpriteRenderer>().sprite =
+                    buildingsInWorld.buildingSpriteList[currentEvolveState]
+                        .spritesPerSkill[GetSkillSprite(tileList.GetTile(localPos).currentEvolveState,tileList.GetTile(localPos).numberOfVillagerInHouse)];
+                break;
+            }
+            default:
+            {
+                buildingOnGrid.GetComponent<SpriteRenderer>().sprite =
+                    buildingsInWorld.buildingSpriteList[tileList.GetTile(localPos).currentEvolveState]
+                        .spritesPerSkill[0];
+                break;
+            }
+        }
+    }
+    
+    int GetSkillSprite(int evolve, int skill)
+    {
+        int index = skill;
+        if (skill > 2)
+        {
+            index -= (2*evolve);
+        }
+
+        // Debug log
+        Debug.Log($"[GetSkillSprite] evolve: {evolve}, skill: {skill}, result index: {index}");
+
+        return index;
+    }
 }
 

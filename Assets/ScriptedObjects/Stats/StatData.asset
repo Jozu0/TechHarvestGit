@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StatData
   m_EditorClassIdentifier: 
   fortuneBoost: 1
-  movementSpeed: 10
-  bulletSpeed: 8
+  movementSpeed: 16
+  bulletSpeed: 10
   bulletRate: 1
   bulletDamage: 1
   totalVillagers: 0

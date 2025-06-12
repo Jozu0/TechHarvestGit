@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,6 +54,7 @@ public class SlotUI : MonoBehaviour
 
     public void RefreshInventory(Sprite itemSprite, int amount)
     {
+        
         image.sprite = itemSprite;
         amountText.text = amount.ToString()+"x";
         if (amount < 1)
@@ -61,7 +63,15 @@ public class SlotUI : MonoBehaviour
         }
         else
         {
+            PlayInteractionAnimation();
             gameObject.SetActive(true);
         }
+    }
+    
+    void PlayInteractionAnimation()
+    {
+        gameObject.transform.localScale = Vector3.zero;
+        gameObject.transform.DOScale(Vector3.one, 0.3f)
+            .SetEase(Ease.OutBack); // Effet de rebond smooth
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +12,7 @@ public class SkillUpgradeUI : MonoBehaviour
     [SerializeField] public UpgradeSkill upgradeSkill;
     private bool canUpgradeSkill = false;
     [SerializeField] private GlobalRessourceList globalRessourceList;
-
-
+    [SerializeField] public ObjectOnGrid objectOnGrid;
     [SerializeField] private Image skillSprite;
     [SerializeField] private TextMeshProUGUI skillNameText;
     [SerializeField] private TextMeshProUGUI skillDescriptionText;
@@ -39,13 +39,28 @@ public class SkillUpgradeUI : MonoBehaviour
         if (canUpgradeSkill)
         {
             UpdateGlobalRessources();
+            PlayInteractionAnimation();
             switch (upgradeSkill.skillType)
             {
                 case SkillType.MoreVillagers:
                 {
                     tileList.GetTile(localPos).numberOfVillagerInHouse += 1;
-                    statisticData.totalVillagers += 1;
+                    switch(tileList.GetTile(localPos).currentEvolveState)
+                    {
+                        case 0:
+                        {
+                            statisticData.totalVillagers += 1;
+                            break;
+                        }
+                        case 1:
+                        {
+                            statisticData.totalVillagers += 3;
+                            break;
+                        }
+                    }
+                    
                     UpdateSkillUI();
+                    objectOnGrid.GetSprite();
                     break;
                 }
                 case SkillType.IronBullet:
@@ -247,6 +262,13 @@ public class SkillUpgradeUI : MonoBehaviour
             c.a = alpha;
             tmp.color = c;
             tmp.ForceMeshUpdate(); }
+    }
+    
+    void PlayInteractionAnimation()
+    {
+         gameObject.transform.localScale = Vector3.zero;
+        gameObject.transform.DOScale(Vector3.one, 0.3f)
+            .SetEase(Ease.OutBack,1f); // Effet de rebond smooth
     }
 }
 

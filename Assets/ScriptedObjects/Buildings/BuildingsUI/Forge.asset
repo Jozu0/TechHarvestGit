@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Forge
   m_EditorClassIdentifier: 
   maxEvoState: 0
+  manorEvolveStateMin: 0
   currentAmountOfBuildings: 0
   buildingType: 2
   buildingSprite:
-  - {fileID: 731454507, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  - {fileID: 1778897662, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   maximumNumberOfBuildings: 2
   buildingName: Forge
   buildingsInWorld: {fileID: 11400000, guid: 73239b44ddc963444accad788e90223c, type: 2}

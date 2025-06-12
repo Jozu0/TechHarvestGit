@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Manor
   m_EditorClassIdentifier: 
   maxEvoState: 1
+  manorEvolveStateMin: 0
   currentAmountOfBuildings: 0
   buildingType: 0
   buildingSprite:
-  - {fileID: 1386740439, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
-  - {fileID: -1613266747, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  - {fileID: 534794095, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  - {fileID: -2102422755, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   maximumNumberOfBuildings: 1
   buildingName: Manor
   buildingsInWorld: {fileID: 11400000, guid: c52629300a66aa742942401764663636, type: 2}

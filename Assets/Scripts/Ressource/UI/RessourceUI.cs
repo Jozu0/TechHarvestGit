@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class RessourceUI : EventListenerBaseActiveInactive
@@ -11,6 +12,7 @@ public class RessourceUI : EventListenerBaseActiveInactive
     [SerializeField] int maxHealth;
     private Slider healthBar;
     [SerializeField] private GameObject bullet;
+    
     protected override (GameEventType, Action<object,float>)[] GetEventBindings()
     {
         return new (GameEventType, Action<object,float>)[]

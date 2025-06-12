@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8be29f1aee5cb4cad5d0dc4884cb9c, type: 3}
   m_Name: MoreVillagerSkill
   m_EditorClassIdentifier: 
+  skillType: 0
   UpgradeSkillNeedsList:
   - needsToEvolve:
     - ressourceItemNeeded: {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
@@ -20,7 +21,7 @@ MonoBehaviour:
     skillSprite: {fileID: 6136726090811837194, guid: f64d51ae8f5ff584998791cb8e06f66c, type: 3}
     skillName: More Villagers
     skillDescription: -> more shooting rate
-    maxAmountSkill: 4
+    maxAmountSkill: 2
   - needsToEvolve:
     - ressourceItemNeeded: {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
       ressourceAmountNeeded: 4
@@ -28,4 +29,4 @@ MonoBehaviour:
     skillSprite: {fileID: 6136726090811837194, guid: f64d51ae8f5ff584998791cb8e06f66c, type: 3}
     skillName: More Villagers
     skillDescription: -> more shooting rate
-    maxAmountSkill: 6
+    maxAmountSkill: 4

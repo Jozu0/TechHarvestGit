@@ -16,7 +16,7 @@ public class GridPlacementSystem : MonoBehaviour
     {
         if (buildingsSelected !=null &&  buildingSpriteSelected == null)
         {
-            buildingSpriteSelected = buildingsSelected.buildingSpriteList[buildingsSelected.evolveState];
+            buildingSpriteSelected = buildingsSelected.buildingSpriteList[buildingsSelected.evolveState].spritesPerSkill[0];
         }
             
     }

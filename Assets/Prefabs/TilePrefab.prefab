@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -325080726, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  m_Sprite: {fileID: -1542047301, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,7 +206,8 @@ MonoBehaviour:
   globalRessourceList: {fileID: 11400000, guid: 3b1900359dade9c489d56994adca1f9e, type: 2}
   UIManager: {fileID: 0}
   upgradeUIPanel: {fileID: 0}
-  currenSpriteRenderer: {fileID: 0}
+  statisticData: {fileID: 11400000, guid: 04a89c17054eebc40a620305e890f063, type: 2}
+  localPos: {x: 0, y: 0}
 --- !u!61 &-8093203714201142173
 BoxCollider2D:
   m_ObjectHideFlags: 0

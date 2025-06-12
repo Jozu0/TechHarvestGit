@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3028095034d188a44b3b72d38cc7feab, type: 3}
   m_Name: Manor
   m_EditorClassIdentifier: 
-  buildingSpriteList:
-  - {fileID: 1386740439, guid: a2dc272eb1195d44596fe48a7da7dd6b, type: 3}
-  - {fileID: -1613266747, guid: 555e4179135f226498340bdda2a075ba, type: 3}
   coordinates: 
   buildingType: 0
   evolveState: 0
+  buildingSpriteList:
+  - spritesPerSkill:
+    - {fileID: 534794095, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  - spritesPerSkill:
+    - {fileID: -2102422755, guid: 555e4179135f226498340bdda2a075ba, type: 3}

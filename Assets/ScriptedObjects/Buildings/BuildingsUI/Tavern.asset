@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
+  m_Name: Tavern
+  m_EditorClassIdentifier: 
+  maxEvoState: 0
+  manorEvolveStateMin: 0
+  currentAmountOfBuildings: 0
+  buildingType: 7
+  buildingSprite:
+  - {fileID: 1367347240, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  maximumNumberOfBuildings: 1
+  buildingName: Tavern
+  buildingsInWorld: {fileID: 11400000, guid: af429b70a7909c24ba7a8ab6f3638db3, type: 2}
+  itemNeeds:
+  - ressourceItemNeeded: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
+    ressourceAmountNeeded: 5
+  - ressourceItemNeeded: {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
+    ressourceAmountNeeded: 10
+  - ressourceItemNeeded: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
+    ressourceAmountNeeded: 5
+  - ressourceItemNeeded: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
+    ressourceAmountNeeded: 5
+  needsToEvolve: []
+  listNeedsToEvolves: []
+  craftList: {fileID: 11400000, guid: 3349e8678ac5b7b45b8fe4a19d4c0bdf, type: 2}
+  upgradeSkillList: {fileID: 11400000, guid: 3027fbd4c8758284e90884cead4d3f0c, type: 2}

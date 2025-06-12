@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a4a831870e7ea46867d1e943cd2131, type: 3}
+  m_Name: Tower
+  m_EditorClassIdentifier: 
+  maxEvoState: 0
+  manorEvolveStateMin: 1
+  currentAmountOfBuildings: 0
+  buildingType: 5
+  buildingSprite:
+  - {fileID: -869033311, guid: 555e4179135f226498340bdda2a075ba, type: 3}
+  maximumNumberOfBuildings: 1
+  buildingName: Magic Tower
+  buildingsInWorld: {fileID: 11400000, guid: 35e7fc93307c7574c86627b34f1143b0, type: 2}
+  itemNeeds:
+  - ressourceItemNeeded: {fileID: 11400000, guid: bd344a253d45ff245b1059ac71d13433, type: 2}
+    ressourceAmountNeeded: 10
+  - ressourceItemNeeded: {fileID: 11400000, guid: 7d219fb0b3682904a80d2e8da87b82e4, type: 2}
+    ressourceAmountNeeded: 5
+  - ressourceItemNeeded: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
+    ressourceAmountNeeded: 15
+  needsToEvolve: []
+  listNeedsToEvolves: []
+  craftList: {fileID: 11400000, guid: ef874b7ce523f2a448fce1e605bc2161, type: 2}
+  upgradeSkillList: {fileID: 11400000, guid: 4677654144a5ce44dbe4cdab277fae21, type: 2}

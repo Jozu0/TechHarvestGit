@@ -16,6 +16,7 @@ public class PlayerMove : MonoBehaviour
             statisticData.movementSpeed = currentMoveSpeed;
         }
         currentMoveSpeed = statisticData.movementSpeed;
+        currentMoveSpeed = 16;
     }
 
     // Update is called once per frame

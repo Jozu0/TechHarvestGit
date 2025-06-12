@@ -19,6 +19,7 @@ TagManager:
   - BuildingInUIContent
   - MainUIPanel
   - UpgradeUIPanel
+  - BackgroundQuad
   layers:
   - Default
   - TransparentFX
