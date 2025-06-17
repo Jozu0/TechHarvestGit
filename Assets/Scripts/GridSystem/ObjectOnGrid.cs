@@ -91,7 +91,6 @@ public class ObjectOnGrid : MonoBehaviour
     {
         gridPlacementSystem.NoMoreBuildings();
         upgradeUIPanel.NoMoreBuildingsSelectedToUpgrade();
-        UIManager.ChangeCurrentToRessourceManagement(); 
         if (flashTween != null && flashTween.IsActive())
         {
             flashTween.Kill();
@@ -143,7 +142,8 @@ public class ObjectOnGrid : MonoBehaviour
             UpdateBuildingAmount();
             UpdateGlobalRessources();
             EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);
-            
+            SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buildingChangeFX);
+
             return;
         }
         

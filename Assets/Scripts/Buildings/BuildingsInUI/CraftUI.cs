@@ -30,6 +30,7 @@ public class CraftUI : MonoBehaviour
         UpdateSkillUI();
         if (canCraft)
         {
+            SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.craftingButtonFX);
             UpdateGlobalRessources();
             UpdateSkillUI();
             PlayInteractionAnimation();

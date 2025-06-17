@@ -15,19 +15,19 @@ MonoBehaviour:
   ressources:
   - ressourceItem: {fileID: 11400000, guid: ad22423e8ce6c0e428659eacf676ff9d, type: 2}
     ressourceType: 0
-    ressourceAmount: 33
+    ressourceAmount: 77
   - ressourceItem: {fileID: 11400000, guid: ccfb0c7cc1a1112428123272fb7df7b7, type: 2}
     ressourceType: 1
-    ressourceAmount: 69
+    ressourceAmount: 80
   - ressourceItem: {fileID: 11400000, guid: f49b608411bc0364aa131d2ea589d051, type: 2}
     ressourceType: 2
-    ressourceAmount: 74
+    ressourceAmount: 80
   - ressourceItem: {fileID: 11400000, guid: f9511db170d466b4e89fe9db0900a09d, type: 2}
     ressourceType: 3
-    ressourceAmount: 20
+    ressourceAmount: 75
   - ressourceItem: {fileID: 11400000, guid: 950467c0683a66d4f9f542c58a616b8a, type: 2}
     ressourceType: 4
-    ressourceAmount: 7
+    ressourceAmount: 22
   - ressourceItem: {fileID: 11400000, guid: 2a1007f4272355c468f2e585b467e50e, type: 2}
     ressourceType: 5
     ressourceAmount: 0
@@ -45,10 +45,10 @@ MonoBehaviour:
     ressourceAmount: 0
   - ressourceItem: {fileID: 11400000, guid: bd344a253d45ff245b1059ac71d13433, type: 2}
     ressourceType: 11
-    ressourceAmount: 80
+    ressourceAmount: 6
   - ressourceItem: {fileID: 11400000, guid: b52fdc78069f9c5469d2b269e3ca6c4c, type: 2}
     ressourceType: 12
-    ressourceAmount: 80
+    ressourceAmount: 7
   - ressourceItem: {fileID: 11400000, guid: 7d219fb0b3682904a80d2e8da87b82e4, type: 2}
     ressourceType: 13
-    ressourceAmount: 80
+    ressourceAmount: 0

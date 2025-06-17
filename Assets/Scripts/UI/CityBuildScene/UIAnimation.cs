@@ -44,6 +44,7 @@ public class UIAnimation : MonoBehaviour
 
     public void OnClickShowHideButton()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         if (isShown==true)
         {
             HideMenuOnClick();

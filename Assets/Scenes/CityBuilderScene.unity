@@ -171,13 +171,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8265011136608501338, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
+      propertyPath: upgradeBuildingFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f5450e149db6ec4bb8f5d70ca64650b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3106392117832939379, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1009678631}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
 --- !u!1 &511331071
 GameObject:
@@ -304,47 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9288df58f8c1e274f90e53579de18a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1009678627 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3106392117832939379, guid: c5f04010672afd2448a6faadf8843f73, type: 3}
-  m_PrefabInstance: {fileID: 352563834}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1009678631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009678627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e220892549c6b249b257090782975f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MusicSource: {fileID: 0}
-  SFXSource: {fileID: 0}
-  WalkingSource: {fileID: 0}
-  SFXLoopSource: {fileID: 0}
-  AudioMixer: {fileID: 0}
-  menuMusic: {fileID: 0}
-  backgroundNoise: {fileID: 0}
-  death: {fileID: 0}
-  walk: {fileID: 0}
-  damageTakenCube: {fileID: 0}
-  swordAttack: {fileID: 0}
-  swordHeal: {fileID: 0}
-  colorChangeCube: {fileID: 0}
-  enemyDying: {fileID: 0}
-  enemyAttack: {fileID: 0}
-  pushCube: {fileID: 0}
-  enemyGetHit: {fileID: 0}
-  enemyClap: {fileID: 0}
-  randomScaryNoise1: {fileID: 0}
-  randomScaryNoise2: {fileID: 0}
-  doorOpen: {fileID: 0}
-  pressurePlateActivate: {fileID: 0}
-  caveNoise: {fileID: 0}
-  click: {fileID: 0}
 --- !u!1001 &1035838256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410,17 +370,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 175753905589134514, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1205457269}
     - target: {fileID: 213995063430263678, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1002724250}
+    - target: {fileID: 545744623664843327, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1002724250}
     - target: {fileID: 3030455062347221109, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
       propertyPath: m_Name
       value: UICityBuild
-      objectReference: {fileID: 0}
-    - target: {fileID: 3540711203049799518, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6210279833744624350, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
       propertyPath: m_Pivot.x
@@ -502,53 +466,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7984472772513369454, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 716.0784
+    - target: {fileID: 6969044228615055960, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7984472772513369454, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -105
-      objectReference: {fileID: 0}
-    - target: {fileID: 7984472772513369454, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 8.079
-      objectReference: {fileID: 0}
-    - target: {fileID: 8029579262602344648, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: m_CellSize.x
-      value: 190
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070735633415494778, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: tileList
-      value: 
-      objectReference: {fileID: 11400000, guid: c173d4d9b37f6674887989f8cadaab8a, type: 2}
-    - target: {fileID: 8070735633415494778, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: craftItemPanelPrefab
-      value: 
-      objectReference: {fileID: 3108816691034179096, guid: 4737bdfa2bed02b4bb6d36f84249abf3, type: 3}
-    - target: {fileID: 8070735633415494778, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: updateSkillPanelPrefab
-      value: 
-      objectReference: {fileID: 3108816691034179096, guid: 8aeb7851c5cfe174e93c265161229a15, type: 3}
-    - target: {fileID: 8070735633415494778, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-      propertyPath: craftSkillUpgradeListParent
-      value: 
-      objectReference: {fileID: 1498183185}
     - target: {fileID: 9025890482468494467, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7707566979838585642, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
+    - target: {fileID: 9107012288657114610, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1205457269}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
---- !u!1 &1498183185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7964843439961990134, guid: c08c3c88ec4725e4eafc26feb168abe5, type: 3}
-  m_PrefabInstance: {fileID: 1049214127}
+--- !u!114 &1205457269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 896425682969837050, guid: 3e91fd688a30a8846a1f017d59cfd50d, type: 3}
+  m_PrefabInstance: {fileID: 1035838256}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463202ce2bba4674a90bacf33234d301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2060881642
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,8 +553,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 0.99958426
+    height: 0.99958426
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

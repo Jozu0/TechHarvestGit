@@ -38,6 +38,7 @@ public class SkillUpgradeUI : MonoBehaviour
         UpdateSkillUI();
         if (canUpgradeSkill)
         {
+            SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.skillButtonFX);
             UpdateGlobalRessources();
             PlayInteractionAnimation();
             switch (upgradeSkill.skillType)

@@ -20,6 +20,7 @@ TagManager:
   - MainUIPanel
   - UpgradeUIPanel
   - BackgroundQuad
+  - ManagerNotDestroyed
   layers:
   - Default
   - TransparentFX

@@ -16,22 +16,14 @@ public class SoundFXManager : MonoBehaviour
     public AudioClip menuMusic;
     public AudioClip cityBuilderMusic;
     public AudioClip shootingMusic;
-    public AudioClip moveDrone;
-    public AudioClip hitRessource;
-    public AudioClip destroyRessource;
-    public AudioClip newItemAdded;
-    public AudioClip colorChangeCube;
-    public AudioClip enemyDying;
-    public AudioClip enemyAttack;
-    public AudioClip pushCube;
-    public AudioClip enemyGetHit;
-    public AudioClip enemyClap;
-    public AudioClip randomScaryNoise1;
-    public AudioClip randomScaryNoise2;
-    public AudioClip doorOpen;
-    public AudioClip pressurePlateActivate;
-    public AudioClip caveNoise;
-    public AudioClip click;
+    public AudioClip hitRessourceFX;
+    public AudioClip destroyRessourceFX;
+    public AudioClip newItemAddedFX;
+    public AudioClip skillButtonFX;
+    public AudioClip craftingButtonFX;
+    public AudioClip buildingChangeFX;
+    public AudioClip upgradeBuildingFX;
+    public AudioClip buttonClickFX;
     
     private string currentScene = "";
 
@@ -49,7 +41,6 @@ public class SoundFXManager : MonoBehaviour
             Destroy(gameObject); // Évite les doublons si une autre instance existe
         }
     }
-
     
     private void Update()
     {
@@ -58,14 +49,23 @@ public class SoundFXManager : MonoBehaviour
         if (sceneName != currentScene)
         {
             currentScene = sceneName;
-            if (sceneName == "MainMenuScene")
+            switch (sceneName)
             {
-                PlayMusic(sceneName,menuMusic);
-                SoundFXManager.Instance.PauseSfxLoop();
-
-            }else
-            {
-                PlayMusic(sceneName,backgroundNoise);
+                case "MainMenuScene":
+                {
+                    PlayMusic(menuMusic);
+                    break;
+                }
+                case "LevelFieldScene":
+                {
+                    PlayMusic(shootingMusic);
+                    break;
+                }
+                case "CityBuilderScene":
+                {
+                    PlayMusic(cityBuilderMusic);
+                    break;
+                }
             }
         }
     }
@@ -75,7 +75,7 @@ public class SoundFXManager : MonoBehaviour
         MusicSource.mute = !MusicSource.mute ;
     }
     
-    public void PlayMusic(string sceneName,AudioClip clip )
+    public void PlayMusic(AudioClip clip )
     {
         if (MusicSource != null)
         {
@@ -94,37 +94,5 @@ public class SoundFXManager : MonoBehaviour
         SFXSource.PlayOneShot(clip);
     }
 
-    public void PlayWalk(AudioClip clip)
-    {
-        WalkingSource.clip = clip;
-        WalkingSource.loop = true;
-        WalkingSource.Play();
-    }
-
-    public void StopWalking()
-    {
-        WalkingSource.Stop();
-    }
-
-    public void PlaySfxLoop(AudioClip clip)
-    {
-        SFXLoopSource.clip = clip;
-        SFXLoopSource.loop = true;
-        SFXLoopSource.Play();
-    }
-    
-    public void PauseSfxLoop()
-    {
-        SFXLoopSource.Pause();
-    }
-
-    public void UnPauseSfxLoop()
-    {
-        SFXLoopSource.UnPause();
-    }
-
-    public void PlayLocalizedSFX(AudioClip clip)
-    {
-        
-    }
+  
 }

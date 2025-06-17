@@ -84,6 +84,7 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
     
     private void OnRessourceHitBehaviour(object data, float damage)
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.hitRessourceFX);
         if (!ReferenceEquals((GameObject)data, this.gameObject)) return;
         if (currentRessourceHP-(int)damage > 1)
         {
@@ -97,6 +98,7 @@ public class RessourceBehaviour : EventListenerBaseActiveInactive
 
     private void OnRessourceDeadBehaviour(object data, float damage)
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.destroyRessourceFX);
         if ((GameObject)data != this.gameObject) return;
         gameObject.SetActive(false);
         ressourceManager.AddItem(currentRessourceToSpawn);

@@ -46,13 +46,23 @@ public class MySceneManager : MonoBehaviour
 
     public void LoadLevelFieldScene()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         CleanBeforeSceneChange();
         SceneManager.LoadScene("LevelFieldScene");
     }
     public void LoadBuildingScene()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         CleanBeforeSceneChange();
-        SceneManager.LoadScene("CityBuildScene");
+        SceneManager.LoadScene("CityBuilderScene");
+
+    }
+    
+    public void LoadMainMenuScene()
+    {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
+        CleanBeforeSceneChange();
+        SceneManager.LoadScene("MainMenuScene");
 
     }
     

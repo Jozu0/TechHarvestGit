@@ -109,6 +109,9 @@
         {
             if (isInteractable)
             {
+                SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.upgradeBuildingFX);
+                SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buildingChangeFX);
+
                 UpdateGlobalRessources();
                 PlayInteractionAnimation();
                 EventManager.TriggerEvent(GameEventType.AddOrDeleteRessourceInUI, null, 0);

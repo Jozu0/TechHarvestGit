@@ -90,22 +90,28 @@ public class UIManager : MonoBehaviour
     
     public void ChangeCurrentToOption()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         currentMenuState = UIMenuState.Option;
     }
     public void ChangeCurrentToMenu()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         currentMenuState = UIMenuState.Menu;
     }
     public void ChangeCurrentToRessourceManagement()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         currentMenuState = UIMenuState.RessourceManagement;
     }
     public void ChangeCurrentToUpgradeManagement()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
+
         currentMenuState = UIMenuState.UpgradeManagement;
     }
     public void ChangeCurrentToBuildManagement()
     {
+        SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
         currentMenuState = UIMenuState.BuildManagement;
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2812565781777233365}
   - component: {fileID: 5791582491629842377}
   - component: {fileID: 3708870043336271638}
+  - component: {fileID: 896425682969837050}
   m_Layer: 0
   m_Name: ManagersDestroyed
   m_TagString: Untagged
@@ -57,3 +58,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9288df58f8c1e274f90e53579de18a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &896425682969837050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928547355954908369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463202ce2bba4674a90bacf33234d301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 63fa349af9ca69448945db05dca14db8, type: 2}

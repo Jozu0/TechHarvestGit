@@ -90,6 +90,7 @@ public class BuildingsInUIBehaviour : EventListenerBaseAwakeDestroy
     {
         if (isInteractable)
         {
+            SoundFXManager.Instance.PlaySfx(SoundFXManager.Instance.buttonClickFX);
             PlayInteractionAnimation();
             gridPlacementSystem.isBuildingSelected = true;
             gridPlacementSystem.buildingsSelected = buildingsInMenu.buildingsInWorld;
